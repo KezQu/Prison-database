@@ -26,7 +26,6 @@ private:
 	ImGuiViewport* vp{ nullptr };
 
 	bool zaktualizuj_dane{ false };
-	bool odswiez{ false };
 	Sesja zu;
 public:
 	bool close{ true };
@@ -43,13 +42,11 @@ public:
 	Sesja::Status const& GetStatus();
 private:
 	static ImGuiIO& CreateImGui();
-	std::string PobierzWybor(Baza& baza, std::string zapytanie) {
+	std::vector<std::string> PobierzWybor(Baza& baza, std::string zapytanie) {
 		auto zapytanie_wynik = baza.query<std::string>(zapytanie);
-		std::string rezultat{ ' ' };
-		rezultat += '\0';
+		std::vector<std::string> rezultat{ "" };
 		for (auto [pole] : zapytanie_wynik) {
-			rezultat += pole;
-			rezultat += '\0';
+			rezultat.push_back(pole);
 		}
 		return rezultat; };
 	template<typename Typ>

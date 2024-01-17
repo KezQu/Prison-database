@@ -31,27 +31,26 @@ struct Skazany : public Osoba {
 		ilosc_wizytacji{ std::get<12>(row) }
 	{}
 	Skazany(std::tuple<SKAZANY_WSTAW> row)
-		:Osoba{ std::get<0>(row), std::get<1>(row), std::get<2>(row), std::get<3>(row), Data_urodzenia(pesel) },
+		:Osoba{ std::get<0>(row), std::get<1>(row), std::get<2>(row), std::get<3>(row) },
 		id_cela{ std::get<4>(row) },
 		id_zbrodnia{ std::get<5>(row) },
-		nazwa_zbrodni{ std::get<6>(row) },
-		dlugosc_pozbawienia_wolnosci{ std::get<7>(row) },
 		opis_zbrodni{ std::get<8>(row) }
 	{}
 	std::string Wstaw(Baza& baza) override{
 		try {
-			baza.query<>("INSERT INTO skazany VALUES \
+			std::string zapytanie = "INSERT INTO skazany VALUES \
 				(" + std::to_string(id) +
 				", " + Pesel_arr(pesel) +
 				", '" + imie + "'" +
 				", '" + nazwisko + "'" +
 				", '" + data_urodzenia + "'," +
-				std::to_string(id_cela) + ");");
+				std::to_string(id_cela) + ");";
 			
-			baza.query<>("INSERT INTO skazany_zbrodnia VALUES \
+			zapytanie += "INSERT INTO skazany_zbrodnia VALUES \
 				(" + std::to_string(id) +
 				", " + std::to_string(id_zbrodnia) +
-				", '" + opis_zbrodni + "');");
+				", " + (opis_zbrodni.length() == 0 ? "NULL" : "'" + opis_zbrodni + "'") + ");";
+			baza.query<>(zapytanie);
 		}
 		catch (std::exception& e) {
 			return e.what();

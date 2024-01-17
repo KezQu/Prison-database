@@ -25,8 +25,8 @@ struct Zajecia : public Obiekt{
 		try {
 			baza.query("INSERT INTO zajecia_resocjalizacyjne VALUES (" +
 				std::to_string(id) +
-				", '" + nazwa_zajec + "'" +
-				", '" + opis_zajec + "'" +
+				", " + (nazwa_zajec.length() == 0 ? "NULL" : "'" + nazwa_zajec + "'") +
+				", " + (opis_zajec.length() == 0 ? "NULL" : "'" + opis_zajec + "'") +
 				", " + std::to_string(id_pracownik) + ");");
 		}
 		catch (std::exception& e) {
@@ -36,15 +36,16 @@ struct Zajecia : public Obiekt{
 	}
 	std::string Edytuj(Baza& baza) override {
 		try {
-			baza.query("UPDATE zajecia_resocjalizacyjne \
-				SET opis_zajec = '" + opis_zajec + "'" +
-				"WHERE id_zajecia = " + std::to_string(id) + ";");
+			std::string zapytanie = "UPDATE zajecia_resocjalizacyjne \
+				SET opis_zajec = " + (opis_zajec.length() == 0 ? "NULL" : "'" + opis_zajec + "'") +
+				" WHERE id_zajecia = " + std::to_string(id) + ";";
 			for (auto& grupa : grupa_vec) {
-				baza.query("UPDATE grupa_zajeciowa \
-							SET zajecia_od = '" + grupa.zajecia_od + "'" +
-							", zajecia_do = '" + grupa.zajecia_do + "'" +
-					"WHERE id_grupa = " + std::to_string(grupa.id) + ";");
+				zapytanie += "UPDATE grupa_zajeciowa \
+					SET zajecia_od = " + (grupa.zajecia_od.length() == 0 ? "NULL" : "'" + grupa.zajecia_od + "'") +
+					", zajecia_do = " + (grupa.zajecia_do.length() == 0 ? "NULL" : "'" + grupa.zajecia_do + "'") +
+					" WHERE id_grupa = " + std::to_string(grupa.id) + ";";
 			}
+			baza.query(zapytanie);
 		}
 		catch (std::exception& e) {
 			return e.what();

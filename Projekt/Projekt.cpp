@@ -14,7 +14,8 @@ int main()
 		login_info.open(path + "/\\db_login.txt");
 		std::getline(login_info, login_details);
 		login_info.close();
-		Baza baza(login_details);
+		std::cout << login_details << std::endl;
+		Baza baza("host=flora.db.elephantsql.com port=5432 dbname=hsyqexiy user=hsyqexiy password=tTWWg_ANr4mgZJC9xARLKBeAcfRkH9ej connect_timeout=10");
 
 		while (window.Loop()) {
 			window.Refresh();
@@ -22,8 +23,8 @@ int main()
 			if (window.GetStatus() == Sesja::NIEZALOGOWANY)
 				window.Logowanie(baza);
 			else {
-				window.Dodawanie(baza);
 				window.Wyszukiwanie(baza);
+				window.Dodawanie(baza);
 				window.Dane();
 			}
 			window.Render();

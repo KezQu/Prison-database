@@ -22,8 +22,8 @@ struct Grupa : public Obiekt{
 			baza.query("INSERT INTO grupa_zajeciowa VALUES (" +
 				std::to_string(id) +
 				", '" + std::to_string(id_zajecia)+"'" +
-				", '" + zajecia_od + "'" +
-				", '" + zajecia_do + "'" + ");");
+				", " + (zajecia_od.length() == 0 ? "NULL" : "'" + zajecia_od + "'") +
+				", " + (zajecia_do.length() == 0 ? "NULL" : "'" + zajecia_do + "'") + ");");
 		}
 		catch (std::exception& e) {
 			return e.what();

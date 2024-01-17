@@ -79,7 +79,10 @@ bool ImGui::InputTextWithHint(const char* label, const char* hint, std::string* 
     cb_user_data.ChainCallbackUserData = user_data;
     return InputTextWithHint(label, hint, (char*)str->c_str(), str->capacity() + 1, flags, InputTextCallback, &cb_user_data);
 }
-
+bool ImGui::Combo(const char* label, int* current_item, const std::vector<std::string>& items, int items_count, int height_in_items)
+{
+    return Combo(label, current_item, [](void* data, int idx, const char** out_text) { *out_text = (*reinterpret_cast<std::vector<std::string>*>(data))[idx].c_str(); return true; }, (void*)&items, items_count, height_in_items);
+}
 #if defined(__clang__)
 #pragma clang diagnostic pop
 #endif
