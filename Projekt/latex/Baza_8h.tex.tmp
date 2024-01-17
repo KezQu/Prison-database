@@ -1,0 +1,36 @@
+\hypertarget{Baza_8h}{}\doxysection{Dokumentacja pliku include/\+Baza.h}
+\label{Baza_8h}\index{include/Baza.h@{include/Baza.h}}
+
+
+Plik zawierajacy klase reprezentujaca interfejs pomiedzy baza a aplikacja.  
+
+
+{\ttfamily \#include $<$pqxx/pqxx$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+Wykres zależności załączania dla Baza.\+h\+:
+% FIG 0
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:
+% FIG 1
+\doxysubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classBaza}{Baza}}
+\begin{DoxyCompactList}\small\item\em Klasa reprezentujaca interfejs polaczeniowy miedzy baza danych a aplikacja. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Plik zawierajacy klase reprezentujaca interfejs pomiedzy baza a aplikacja. 
+
+\begin{DoxyAuthor}{Autor}
+Jakub Mikusek 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Wersja}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2024-\/01-\/17
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}

@@ -1,0 +1,20 @@
+digraph "Graficzna hierarchia klas"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="Obiekt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structObiekt.html",tooltip="Struktura przedstawiajaca najbardizej podstawowy obiekt bazy danych."];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="Grupa",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structGrupa.html",tooltip="Struktura ktora przedstawia grupe zajeciowa o polach jak w bazie danych."];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Osoba",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsoba.html",tooltip="Klasa reprezentujaca osobe."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Pracownik",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structPracownik.html",tooltip="Struktura reprezentujaca pracownika wiezienia."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Skazany",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structSkazany.html",tooltip="Struktura reprezentujaca skazanego."];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Wizytator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWizytator.html",tooltip="Struktura reprezentujaca wizytatora."];
+  Node0 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Zajecia",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structZajecia.html",tooltip="Struktura reprezentujaca zajecia resocjalizacyjne."];
+}

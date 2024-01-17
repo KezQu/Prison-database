@@ -1,0 +1,189 @@
+\hypertarget{classWindow}{}\doxysection{Dokumentacja klasy Window}
+\label{classWindow}\index{Window@{Window}}
+
+
+klasa reprezentujaca okno kontekstowe oraz cala logike stojaca za wyswietlanymi tresciami  
+
+
+
+
+{\ttfamily \#include $<$Window.\+h$>$}
+
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWindow_a5ecf65b70f52e5b86cd320af1afc2a0a}{Window}} (int w, int h, std\+::string title)
+\begin{DoxyCompactList}\small\item\em Tworzy nowy obiekt reprezentujacy okno o zadanych parametrach, oraz tytule. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWindow_a245d821e6016fa1f6970ccbbedd635f6}{$\sim$\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Niszczy stworzone okno. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWindow_a63931782c0ed4c751da6fc6fdbf2c993}{Loop}} ()
+\begin{DoxyCompactList}\small\item\em Metoda sprawdzajaca, czy aplikacja dalej powinna dzialac. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWindow_ae2408e16042a51630a490c2831638a4c}{Refresh}} ()
+\begin{DoxyCompactList}\small\item\em Metoda tworzaca nowa klatke wyswietlanego obrazu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWindow_a7863fafae23423f404bee7aa3a57e124}{Render}} ()
+\begin{DoxyCompactList}\small\item\em Metoda podmieniajaca bufory oraz wyswietlajaca wygenerowana zawartosc na okno. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWindow_a449e3c56d6f949746245b8a5503edf9f}{Logowanie}} (\mbox{\hyperlink{classBaza}{Baza}} \&baza)
+\begin{DoxyCompactList}\small\item\em Metoda tworzaca okno odpowiadajace na logowanie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWindow_af506d864a029385ee82508b64cb6ac53}{Dodawanie}} (\mbox{\hyperlink{classBaza}{Baza}} \&baza)
+\begin{DoxyCompactList}\small\item\em Metoda tworzaca okno odpowiadajace za dodawanie danych poprzez wygenerowane formularze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWindow_abaede69d476e67f0bef8781eb690f529}{Wyszukiwanie}} (\mbox{\hyperlink{classBaza}{Baza}} \&baza)
+\begin{DoxyCompactList}\small\item\em Metoda tworzaca okno odpowiadajace za wyszkuwanie porzadanych danych z posrod danych otrzymanych z bazy danych. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWindow_a7bef865348e5f24c35b46ed11302a2be}{Dane}} ()
+\begin{DoxyCompactList}\small\item\em Metoda tworzaca okno odpowiadajace za dane zalogowanego uzytkownika. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSesja_a153c6d67d12384f8138200798d75ae85}{Sesja\+::\+Status}} const  \& \mbox{\hyperlink{classWindow_a89bbb9acfdad44d13a6e012a0eab70d1}{Get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwracajaca aktualny status sesji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWindow_aa7b51783443a694f53eb47547d3f25ef}\label{classWindow_aa7b51783443a694f53eb47547d3f25ef}} 
+bool {\bfseries close} \{ true \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+klasa reprezentujaca okno kontekstowe oraz cala logike stojaca za wyswietlanymi tresciami 
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{classWindow_a5ecf65b70f52e5b86cd320af1afc2a0a}\label{classWindow_a5ecf65b70f52e5b86cd320af1afc2a0a}} 
+\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}}
+{\footnotesize\ttfamily Window\+::\+Window (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h,  }\item[{std\+::string}]{title }\end{DoxyParamCaption})}
+
+
+
+Tworzy nowy obiekt reprezentujacy okno o zadanych parametrach, oraz tytule. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em w} & szerokosc okna \\
+\hline
+{\em h} & wysokosc okna \\
+\hline
+{\em title} & tytul okna \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWindow_a245d821e6016fa1f6970ccbbedd635f6}\label{classWindow_a245d821e6016fa1f6970ccbbedd635f6}} 
+\index{Window@{Window}!````~Window@{$\sim$Window}}
+\index{````~Window@{$\sim$Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{$\sim$Window()}{~Window()}}
+{\footnotesize\ttfamily Window\+::$\sim$\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Niszczy stworzone okno. 
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{classWindow_a7bef865348e5f24c35b46ed11302a2be}\label{classWindow_a7bef865348e5f24c35b46ed11302a2be}} 
+\index{Window@{Window}!Dane@{Dane}}
+\index{Dane@{Dane}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Dane()}{Dane()}}
+{\footnotesize\ttfamily void Window\+::\+Dane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda tworzaca okno odpowiadajace za dane zalogowanego uzytkownika. 
+
+\mbox{\Hypertarget{classWindow_af506d864a029385ee82508b64cb6ac53}\label{classWindow_af506d864a029385ee82508b64cb6ac53}} 
+\index{Window@{Window}!Dodawanie@{Dodawanie}}
+\index{Dodawanie@{Dodawanie}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Dodawanie()}{Dodawanie()}}
+{\footnotesize\ttfamily void Window\+::\+Dodawanie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBaza}{Baza}} \&}]{baza }\end{DoxyParamCaption})}
+
+
+
+Metoda tworzaca okno odpowiadajace za dodawanie danych poprzez wygenerowane formularze. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em baza} & interfejs bazodanowy, gdzie wprowadzane beda zapytania \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWindow_a89bbb9acfdad44d13a6e012a0eab70d1}\label{classWindow_a89bbb9acfdad44d13a6e012a0eab70d1}} 
+\index{Window@{Window}!GetStatus@{GetStatus}}
+\index{GetStatus@{GetStatus}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{GetStatus()}{GetStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSesja_a153c6d67d12384f8138200798d75ae85}{Sesja\+::\+Status}} const  \& Window\+::\+Get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda zwracajaca aktualny status sesji. 
+
+\begin{DoxyReturn}{Zwraca}
+\mbox{\hyperlink{structSesja_a153c6d67d12384f8138200798d75ae85}{Sesja\+::\+Status}} const\& status sesji 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWindow_a449e3c56d6f949746245b8a5503edf9f}\label{classWindow_a449e3c56d6f949746245b8a5503edf9f}} 
+\index{Window@{Window}!Logowanie@{Logowanie}}
+\index{Logowanie@{Logowanie}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Logowanie()}{Logowanie()}}
+{\footnotesize\ttfamily void Window\+::\+Logowanie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBaza}{Baza}} \&}]{baza }\end{DoxyParamCaption})}
+
+
+
+Metoda tworzaca okno odpowiadajace na logowanie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em baza} & interfejs bazodanowy, gdzie wprowadzane beda zapytania \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWindow_a63931782c0ed4c751da6fc6fdbf2c993}\label{classWindow_a63931782c0ed4c751da6fc6fdbf2c993}} 
+\index{Window@{Window}!Loop@{Loop}}
+\index{Loop@{Loop}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Loop()}{Loop()}}
+{\footnotesize\ttfamily bool Window\+::\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda sprawdzajaca, czy aplikacja dalej powinna dzialac. 
+
+\begin{DoxyReturn}{Zwraca}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWindow_ae2408e16042a51630a490c2831638a4c}\label{classWindow_ae2408e16042a51630a490c2831638a4c}} 
+\index{Window@{Window}!Refresh@{Refresh}}
+\index{Refresh@{Refresh}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Refresh()}{Refresh()}}
+{\footnotesize\ttfamily void Window\+::\+Refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda tworzaca nowa klatke wyswietlanego obrazu. 
+
+\mbox{\Hypertarget{classWindow_a7863fafae23423f404bee7aa3a57e124}\label{classWindow_a7863fafae23423f404bee7aa3a57e124}} 
+\index{Window@{Window}!Render@{Render}}
+\index{Render@{Render}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Window\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda podmieniajaca bufory oraz wyswietlajaca wygenerowana zawartosc na okno. 
+
+\mbox{\Hypertarget{classWindow_abaede69d476e67f0bef8781eb690f529}\label{classWindow_abaede69d476e67f0bef8781eb690f529}} 
+\index{Window@{Window}!Wyszukiwanie@{Wyszukiwanie}}
+\index{Wyszukiwanie@{Wyszukiwanie}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Wyszukiwanie()}{Wyszukiwanie()}}
+{\footnotesize\ttfamily void Window\+::\+Wyszukiwanie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBaza}{Baza}} \&}]{baza }\end{DoxyParamCaption})}
+
+
+
+Metoda tworzaca okno odpowiadajace za wyszkuwanie porzadanych danych z posrod danych otrzymanych z bazy danych. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em baza} & interfejs bazodanowy, gdzie wprowadzane beda zapytania \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Window_8h}{Window.\+h}}\item 
+source/Window.\+cpp\end{DoxyCompactItemize}

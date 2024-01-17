@@ -1,0 +1,137 @@
+\hypertarget{structZajecia}{}\doxysection{Dokumentacja struktury Zajecia}
+\label{structZajecia}\index{Zajecia@{Zajecia}}
+
+
+Struktura reprezentujaca zajecia resocjalizacyjne.  
+
+
+
+
+{\ttfamily \#include $<$Zajecia.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Zajecia
+% FIG 0
+
+
+Diagram współpracy dla Zajecia\+:
+% FIG 1
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structZajecia_ad33bbfe71ea80bd3d32d5aedeea828bf}{Zajecia}} ()
+\begin{DoxyCompactList}\small\item\em Domyslny konstruktor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structZajecia_ad8330be489100ba5c30fbe69e300fef3}{Zajecia}} (std\+::tuple$<$ Z\+A\+J\+E\+C\+I\+A\+\_\+\+I\+N\+FO $>$ const \&row)
+\begin{DoxyCompactList}\small\item\em Konstruktor pozwalajacy na stworzenie nowych zajec na podstawie rekordu z bazy danych. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structZajecia_abd5857b743505204ebc2269fd62e2998}{Wstaw}} (\mbox{\hyperlink{classBaza}{Baza}} \&baza) override
+\begin{DoxyCompactList}\small\item\em Metoda pozwalajaca na wstawienie nowych zajec do bazy. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structZajecia_a5da4b8358893d77c9742f2e517ed3afd}{Edytuj}} (\mbox{\hyperlink{classBaza}{Baza}} \&baza) override
+\begin{DoxyCompactList}\small\item\em Metoda pozwalajaca na edytowanie zajec w bazie danych. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structZajecia_abefc5aa5344b8da8065443fa209da848}\label{structZajecia_abefc5aa5344b8da8065443fa209da848}} 
+std\+::string {\bfseries nazwa\+\_\+zajec}
+\item 
+\mbox{\Hypertarget{structZajecia_a359debc1a6261e92108c929d3b46a434}\label{structZajecia_a359debc1a6261e92108c929d3b46a434}} 
+std\+::string {\bfseries opis\+\_\+zajec}
+\item 
+\mbox{\Hypertarget{structZajecia_aee8ffb2f645311c8de4d20b0c9c0f768}\label{structZajecia_aee8ffb2f645311c8de4d20b0c9c0f768}} 
+int {\bfseries id\+\_\+pracownik} \{\}
+\item 
+\mbox{\Hypertarget{structZajecia_a0bcb48da00adf03aeae0e9e1d5aeca9a}\label{structZajecia_a0bcb48da00adf03aeae0e9e1d5aeca9a}} 
+std\+::string {\bfseries imie}
+\item 
+\mbox{\Hypertarget{structZajecia_a5bdb02562eb4ec5ed8fa1a8cc26f8480}\label{structZajecia_a5bdb02562eb4ec5ed8fa1a8cc26f8480}} 
+std\+::string {\bfseries nazwisko}
+\item 
+\mbox{\Hypertarget{structZajecia_a08fab1d1d72abb322ab3ee9092ccd6ef}\label{structZajecia_a08fab1d1d72abb322ab3ee9092ccd6ef}} 
+std\+::vector$<$ \mbox{\hyperlink{structGrupa}{Grupa}} $>$ {\bfseries grupa\+\_\+vec}
+\end{DoxyCompactItemize}
+\doxysubsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\doxysubsection{Opis szczegółowy}
+Struktura reprezentujaca zajecia resocjalizacyjne. 
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{structZajecia_ad33bbfe71ea80bd3d32d5aedeea828bf}\label{structZajecia_ad33bbfe71ea80bd3d32d5aedeea828bf}} 
+\index{Zajecia@{Zajecia}!Zajecia@{Zajecia}}
+\index{Zajecia@{Zajecia}!Zajecia@{Zajecia}}
+\doxysubsubsection{\texorpdfstring{Zajecia()}{Zajecia()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Zajecia\+::\+Zajecia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Domyslny konstruktor. 
+
+\mbox{\Hypertarget{structZajecia_ad8330be489100ba5c30fbe69e300fef3}\label{structZajecia_ad8330be489100ba5c30fbe69e300fef3}} 
+\index{Zajecia@{Zajecia}!Zajecia@{Zajecia}}
+\index{Zajecia@{Zajecia}!Zajecia@{Zajecia}}
+\doxysubsubsection{\texorpdfstring{Zajecia()}{Zajecia()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Zajecia\+::\+Zajecia (\begin{DoxyParamCaption}\item[{std\+::tuple$<$ Z\+A\+J\+E\+C\+I\+A\+\_\+\+I\+N\+FO $>$ const \&}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor pozwalajacy na stworzenie nowych zajec na podstawie rekordu z bazy danych. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em row} & rekord zwrocony dzieki odpowiedniemu zapytaniu do bazy \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{structZajecia_a5da4b8358893d77c9742f2e517ed3afd}\label{structZajecia_a5da4b8358893d77c9742f2e517ed3afd}} 
+\index{Zajecia@{Zajecia}!Edytuj@{Edytuj}}
+\index{Edytuj@{Edytuj}!Zajecia@{Zajecia}}
+\doxysubsubsection{\texorpdfstring{Edytuj()}{Edytuj()}}
+{\footnotesize\ttfamily std\+::string Zajecia\+::\+Edytuj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBaza}{Baza}} \&}]{baza }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Metoda pozwalajaca na edytowanie zajec w bazie danych. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em baza} & interfejs polaczeniowy do bazy danych \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+std\+::string ewentualne tresci bledow 
+\end{DoxyReturn}
+
+
+Reimplementowana z \mbox{\hyperlink{structObiekt_ad5aa1a563be270e573d1ef21723256d1}{Obiekt}}.
+
+\mbox{\Hypertarget{structZajecia_abd5857b743505204ebc2269fd62e2998}\label{structZajecia_abd5857b743505204ebc2269fd62e2998}} 
+\index{Zajecia@{Zajecia}!Wstaw@{Wstaw}}
+\index{Wstaw@{Wstaw}!Zajecia@{Zajecia}}
+\doxysubsubsection{\texorpdfstring{Wstaw()}{Wstaw()}}
+{\footnotesize\ttfamily std\+::string Zajecia\+::\+Wstaw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBaza}{Baza}} \&}]{baza }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Metoda pozwalajaca na wstawienie nowych zajec do bazy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em baza} & interfejs polaczeniowy do bazy danych \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+std\+::string ewentualne tresci bledow 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{structObiekt_ad08455c8a0f242bec037c3c5c8f13b40}{Obiekt}}.
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Zajecia_8h}{Zajecia.\+h}}\end{DoxyCompactItemize}

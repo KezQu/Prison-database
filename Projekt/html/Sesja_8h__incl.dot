@@ -1,0 +1,35 @@
+digraph "include/Sesja.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="include/Sesja.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Plik zawierajacy strukture reprezentujaca sesje."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Pracownik.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Pracownik_8h.html",tooltip="Plik zawierajacy strukture reprezentujaca pracownika wiezienia."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Osoba.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Osoba_8h.html",tooltip="Plik zawierajacy klase reprezentujaca osobe."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Obiekt.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Obiekt_8h.html",tooltip="Abstrakcyjna struktura przedstawiajaca obiekt bazodanowy."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Baza.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Baza_8h.html",tooltip="Plik zawierajacy klase reprezentujaca interfejs pomiedzy baza a aplikacja."];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="pqxx/pqxx",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="thread",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Zajecia.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Zajecia_8h.html",tooltip="Plik zawierajacy strukture reprezentujaca zajecia resocjalizacyjne."];
+  Node11 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Grupa.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Grupa_8h.html",tooltip="Plik zawierajacy obiket reprezentujacy grupe zajeciowa."];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Skazany.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Skazany_8h.html",tooltip="Plik zawierajacy strukture reprezentujaca skazanego."];
+  Node13 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

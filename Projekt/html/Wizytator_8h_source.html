@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prison database: Plik źródłowy include/Wizytator.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Prison database
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Wizytator.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Wizytator_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Osoba_8h.html">Osoba.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define WIZYTATOR_INFO int, std::string, std::string, std::string, std::string</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define WIZYTATOR_WSTAW int, std::string, std::string, std::string</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structWizytator.html">   20</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structWizytator.html">Wizytator</a> : <span class="keyword">public</span> <a class="code" href="structOsoba.html">Osoba</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structWizytator.html#a049457c207b372dbb5f7e63d5fc3ecb7">   25</a></span>&#160;    <a class="code" href="structWizytator.html#a049457c207b372dbb5f7e63d5fc3ecb7">Wizytator</a>(): <a class="code" href="structOsoba.html">Osoba</a>{} {}</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structWizytator.html#ae7239aa5cc85aa79c7c54d64ccf78e3f">   31</a></span>&#160;    <a class="code" href="structWizytator.html#ae7239aa5cc85aa79c7c54d64ccf78e3f">Wizytator</a>(std::tuple&lt;WIZYTATOR_INFO&gt; <span class="keyword">const</span>&amp; row)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        :<a class="code" href="structOsoba.html">Osoba</a>{ std::get&lt;0&gt;(row), std::get&lt;1&gt;(row), std::get&lt;2&gt;(row), std::get&lt;3&gt;(row), std::get&lt;4&gt;(row) }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {}</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structWizytator.html#a8ef84cebae197529be461cc14ee443f7">   39</a></span>&#160;    <a class="code" href="structWizytator.html#a8ef84cebae197529be461cc14ee443f7">Wizytator</a>(std::tuple&lt;WIZYTATOR_WSTAW&gt; <span class="keyword">const</span>&amp; row)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        :<a class="code" href="structOsoba.html">Osoba</a>{ std::get&lt;0&gt;(row), std::get&lt;1&gt;(row), std::get&lt;2&gt;(row), std::get&lt;3&gt;(row) }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {}</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structWizytator.html#a6ec4e8ca7e8cea5b199c3f636b7f4aae">   48</a></span>&#160;    std::string <a class="code" href="structWizytator.html#a6ec4e8ca7e8cea5b199c3f636b7f4aae">Wstaw</a>(<a class="code" href="classBaza.html">Baza</a>&amp; baza)<span class="keyword"> override</span>{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            baza.<a class="code" href="classBaza.html#a6b34cff393ec5d0856effb981881a183">query</a>(<span class="stringliteral">&quot;INSERT INTO wizytator VALUES(&quot;</span> +</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                std::to_string(<span class="keywordtype">id</span>) +</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="stringliteral">&quot;, &quot;</span> + <a class="code" href="structOsoba.html#a4b6ee9e4e073550f64230134249cd1f8">Pesel_arr</a>(pesel) + </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="stringliteral">&quot;, &#39;&quot;</span> + imie + <span class="stringliteral">&quot;&#39;&quot;</span> +</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="stringliteral">&quot;, &#39;&quot;</span> + nazwisko + <span class="stringliteral">&quot;&#39;&quot;</span> +</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="stringliteral">&quot;, &#39;&quot;</span> + data_urodzenia + <span class="stringliteral">&quot;&#39;);&quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> e.what();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructWizytator_html_a6ec4e8ca7e8cea5b199c3f636b7f4aae"><div class="ttname"><a href="structWizytator.html#a6ec4e8ca7e8cea5b199c3f636b7f4aae">Wizytator::Wstaw</a></div><div class="ttdeci">std::string Wstaw(Baza &amp;baza) override</div><div class="ttdoc">Metoda pozwalajaca na dodanie nowego wizytatora do bazy danych.</div><div class="ttdef"><b>Definition:</b> Wizytator.h:48</div></div>
+<div class="ttc" id="astructWizytator_html_ae7239aa5cc85aa79c7c54d64ccf78e3f"><div class="ttname"><a href="structWizytator.html#ae7239aa5cc85aa79c7c54d64ccf78e3f">Wizytator::Wizytator</a></div><div class="ttdeci">Wizytator(std::tuple&lt; WIZYTATOR_INFO &gt; const &amp;row)</div><div class="ttdoc">Konstruktor pozwalajacy na stworzenie nowego wizytatora na podstawie rekordu zwroconego z bazy danych...</div><div class="ttdef"><b>Definition:</b> Wizytator.h:31</div></div>
+<div class="ttc" id="astructWizytator_html_a8ef84cebae197529be461cc14ee443f7"><div class="ttname"><a href="structWizytator.html#a8ef84cebae197529be461cc14ee443f7">Wizytator::Wizytator</a></div><div class="ttdeci">Wizytator(std::tuple&lt; WIZYTATOR_WSTAW &gt; const &amp;row)</div><div class="ttdoc">Konstruktor tworzacy nowego wizytatora na podstawie danych z formularza.</div><div class="ttdef"><b>Definition:</b> Wizytator.h:39</div></div>
+<div class="ttc" id="astructOsoba_html_a4b6ee9e4e073550f64230134249cd1f8"><div class="ttname"><a href="structOsoba.html#a4b6ee9e4e073550f64230134249cd1f8">Osoba::Pesel_arr</a></div><div class="ttdeci">static std::string Pesel_arr(std::string pesel)</div><div class="ttdoc">Metoda pozwalajaca na przeksztalcenie numeru pesel na format odpowiedni dla bazy danych.</div><div class="ttdef"><b>Definition:</b> Osoba.h:66</div></div>
+<div class="ttc" id="aclassBaza_html_a6b34cff393ec5d0856effb981881a183"><div class="ttname"><a href="classBaza.html#a6b34cff393ec5d0856effb981881a183">Baza::query</a></div><div class="ttdeci">auto query(std::string query_str)</div><div class="ttdoc">Metoda pozwalajaca na wywolanie zapytania ktore zwraca okreslone dane.</div><div class="ttdef"><b>Definition:</b> Baza.h:151</div></div>
+<div class="ttc" id="astructWizytator_html"><div class="ttname"><a href="structWizytator.html">Wizytator</a></div><div class="ttdoc">Struktura reprezentujaca wizytatora.</div><div class="ttdef"><b>Definition:</b> Wizytator.h:20</div></div>
+<div class="ttc" id="aOsoba_8h_html"><div class="ttname"><a href="Osoba_8h.html">Osoba.h</a></div><div class="ttdoc">Plik zawierajacy klase reprezentujaca osobe.</div></div>
+<div class="ttc" id="astructWizytator_html_a049457c207b372dbb5f7e63d5fc3ecb7"><div class="ttname"><a href="structWizytator.html#a049457c207b372dbb5f7e63d5fc3ecb7">Wizytator::Wizytator</a></div><div class="ttdeci">Wizytator()</div><div class="ttdoc">Konstruktor domyslny.</div><div class="ttdef"><b>Definition:</b> Wizytator.h:25</div></div>
+<div class="ttc" id="astructOsoba_html"><div class="ttname"><a href="structOsoba.html">Osoba</a></div><div class="ttdoc">Klasa reprezentujaca osobe.</div><div class="ttdef"><b>Definition:</b> Osoba.h:19</div></div>
+<div class="ttc" id="aclassBaza_html"><div class="ttname"><a href="classBaza.html">Baza</a></div><div class="ttdoc">Klasa reprezentujaca interfejs polaczeniowy miedzy baza danych a aplikacja.</div><div class="ttdef"><b>Definition:</b> Baza.h:20</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

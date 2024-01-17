@@ -1,0 +1,111 @@
+\hypertarget{structGrupa}{}\doxysection{Dokumentacja struktury Grupa}
+\label{structGrupa}\index{Grupa@{Grupa}}
+
+
+Struktura ktora przedstawia grupe zajeciowa o polach jak w bazie danych.  
+
+
+
+
+{\ttfamily \#include $<$Grupa.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Grupa
+% FIG 0
+
+
+Diagram współpracy dla Grupa\+:
+% FIG 1
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structGrupa_ad65647d4487228866780832362578b8e}{Grupa}} (int id, int new\+\_\+id\+\_\+zajecia)
+\begin{DoxyCompactList}\small\item\em Konstruktor pozwalajacy na stworzenie nowej grupy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structGrupa_ab4a8265104d5df9abeddb5eb574b931b}{Grupa}} (std\+::tuple$<$ G\+R\+U\+P\+A\+\_\+\+I\+N\+FO $>$ const \&row)
+\begin{DoxyCompactList}\small\item\em Konstruktor pozwalajacy na stworzenie obiektu z danych uzyskanych przy pomocy zapytania do bazy danych. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structGrupa_a4ab460b00882d2c05475e55275d625eb}{Wstaw}} (\mbox{\hyperlink{classBaza}{Baza}} \&baza) override
+\begin{DoxyCompactList}\small\item\em Metoda pozwalajaca na wstawienie nowej grupy do bazy danych. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structGrupa_a93d338d9919b7075bb1dc491fc9d49ac}\label{structGrupa_a93d338d9919b7075bb1dc491fc9d49ac}} 
+int {\bfseries id\+\_\+zajecia}
+\item 
+\mbox{\Hypertarget{structGrupa_ad51905234ed928ba239c2f702847f039}\label{structGrupa_ad51905234ed928ba239c2f702847f039}} 
+std\+::string {\bfseries zajecia\+\_\+od} \{\char`\"{}00\+:00\char`\"{}\}
+\item 
+\mbox{\Hypertarget{structGrupa_a13d42760188d29efbb21e2032dd3c702}\label{structGrupa_a13d42760188d29efbb21e2032dd3c702}} 
+std\+::string {\bfseries zajecia\+\_\+do} \{\char`\"{}00\+:00\char`\"{}\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\doxysubsection{Opis szczegółowy}
+Struktura ktora przedstawia grupe zajeciowa o polach jak w bazie danych. 
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{structGrupa_ad65647d4487228866780832362578b8e}\label{structGrupa_ad65647d4487228866780832362578b8e}} 
+\index{Grupa@{Grupa}!Grupa@{Grupa}}
+\index{Grupa@{Grupa}!Grupa@{Grupa}}
+\doxysubsubsection{\texorpdfstring{Grupa()}{Grupa()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Grupa\+::\+Grupa (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{new\+\_\+id\+\_\+zajecia }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor pozwalajacy na stworzenie nowej grupy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em id} & numer ID nowej grupy \\
+\hline
+{\em new\+\_\+id\+\_\+zajecia} & ID zajec do ktorych grupa nalezy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structGrupa_ab4a8265104d5df9abeddb5eb574b931b}\label{structGrupa_ab4a8265104d5df9abeddb5eb574b931b}} 
+\index{Grupa@{Grupa}!Grupa@{Grupa}}
+\index{Grupa@{Grupa}!Grupa@{Grupa}}
+\doxysubsubsection{\texorpdfstring{Grupa()}{Grupa()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Grupa\+::\+Grupa (\begin{DoxyParamCaption}\item[{std\+::tuple$<$ G\+R\+U\+P\+A\+\_\+\+I\+N\+FO $>$ const \&}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor pozwalajacy na stworzenie obiektu z danych uzyskanych przy pomocy zapytania do bazy danych. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em row} & rekord zwrocony z zapytania do bazy danych \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{structGrupa_a4ab460b00882d2c05475e55275d625eb}\label{structGrupa_a4ab460b00882d2c05475e55275d625eb}} 
+\index{Grupa@{Grupa}!Wstaw@{Wstaw}}
+\index{Wstaw@{Wstaw}!Grupa@{Grupa}}
+\doxysubsubsection{\texorpdfstring{Wstaw()}{Wstaw()}}
+{\footnotesize\ttfamily std\+::string Grupa\+::\+Wstaw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBaza}{Baza}} \&}]{baza }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Metoda pozwalajaca na wstawienie nowej grupy do bazy danych. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em baza} & Interfejs wykorzystany do wyslania danych \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+std\+::string ewentualne bledy zwiazane z niepoprawnymi danymi 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{structObiekt_ad08455c8a0f242bec037c3c5c8f13b40}{Obiekt}}.
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Grupa_8h}{Grupa.\+h}}\end{DoxyCompactItemize}

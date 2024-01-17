@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prison database: Plik źródłowy include/Pracownik.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Prison database
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Pracownik.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Pracownik_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Osoba_8h.html">Osoba.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Zajecia_8h.html">Zajecia.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define PRACOWNIK_INFO int, std::string, std::string, std::string, std::string, std::string, int, std::string, int, std::string, std::string, std::string, int</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define PRACOWNIK_WSTAW int, std::string, std::string, std::string, std::string, int, std::string, int, std::string, std::string, std::string</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structPracownik.html">   21</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structPracownik.html">Pracownik</a> : <span class="keyword">public</span> <a class="code" href="structOsoba.html">Osoba</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::string stanowisko;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> id_wiezienie{};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::string haslo;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> id_blok{};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::string nazwa_bloku;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::string czas_pracy_od;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::string czas_pracy_do;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::vector&lt;Zajecia&gt; zajecia;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> ilosc_zajec{};</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structPracownik.html#adae7e8f0ec1088ab80c4cbb3559cc628">   35</a></span>&#160;    <a class="code" href="structPracownik.html#adae7e8f0ec1088ab80c4cbb3559cc628">Pracownik</a>() :<a class="code" href="structOsoba.html">Osoba</a>{} {}</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structPracownik.html#a24481f354fd86b0055763a0f0de8599f">   41</a></span>&#160;    <a class="code" href="structPracownik.html#a24481f354fd86b0055763a0f0de8599f">Pracownik</a>(std::tuple&lt;PRACOWNIK_INFO&gt; <span class="keyword">const</span>&amp; row)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        :<a class="code" href="structOsoba.html">Osoba</a>{ std::get&lt;0&gt;(row), std::get&lt;1&gt;(row), std::get&lt;2&gt;(row), std::get&lt;3&gt;(row), std::get&lt;4&gt;(row)},</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        stanowisko{ std::get&lt;5&gt;(row) },</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        id_wiezienie{ std::get&lt;6&gt;(row) },</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        haslo{ std::get&lt;7&gt;(row) },</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        id_blok{ std::get&lt;8&gt;(row) },</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        nazwa_bloku{ std::get&lt;9&gt;(row) },</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        czas_pracy_od{ std::get&lt;10&gt;(row) },</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        czas_pracy_do{ std::get&lt;11&gt;(row) },</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        ilosc_zajec { std::get&lt;12&gt;(row) }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {}</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structPracownik.html#aebd0ac7b45f0c16fe71672431da03a58">   57</a></span>&#160;    <a class="code" href="structPracownik.html#aebd0ac7b45f0c16fe71672431da03a58">Pracownik</a>(std::tuple&lt;PRACOWNIK_WSTAW&gt; <span class="keyword">const</span>&amp; row)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        :<a class="code" href="structOsoba.html">Osoba</a>{ std::get&lt;0&gt;(row), std::get&lt;1&gt;(row), std::get&lt;2&gt;(row), std::get&lt;3&gt;(row) },</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        stanowisko{ std::get&lt;4&gt;(row) },</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        id_wiezienie{ std::get&lt;5&gt;(row) },</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        haslo{ std::get&lt;6&gt;(row) },</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        id_blok{ std::get&lt;7&gt;(row) },</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        nazwa_bloku{ std::get&lt;8&gt;(row) },</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        czas_pracy_od{ std::get&lt;9&gt;(row) },</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        czas_pracy_do{ std::get&lt;10&gt;(row) }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {}</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="structPracownik.html#a87a111855b497b902e767fa82c872a16">   73</a></span>&#160;    std::string <a class="code" href="structPracownik.html#a87a111855b497b902e767fa82c872a16">Wstaw</a>(<a class="code" href="classBaza.html">Baza</a>&amp; baza)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            std::string zapytanie = <span class="stringliteral">&quot;INSERT INTO pracownik VALUES \</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="stringliteral">                (&quot;</span> + std::to_string(<span class="keywordtype">id</span>) +</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="stringliteral">&quot;, &quot;</span> + <a class="code" href="structOsoba.html#a4b6ee9e4e073550f64230134249cd1f8">Pesel_arr</a>(pesel) +</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="stringliteral">&quot;, &#39;&quot;</span> + imie + <span class="stringliteral">&quot;&#39;&quot;</span> +</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="stringliteral">&quot;, &#39;&quot;</span> + nazwisko + <span class="stringliteral">&quot;&#39;&quot;</span> +</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="stringliteral">&quot;, &#39;&quot;</span> + data_urodzenia + <span class="stringliteral">&quot;&#39;&quot;</span> +</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="stringliteral">&quot;, &quot;</span> + (stanowisko.length() == 0 ? <span class="stringliteral">&quot;NULL&quot;</span> : <span class="stringliteral">&quot;&#39;&quot;</span> + stanowisko + <span class="stringliteral">&quot;&#39;&quot;</span>) + <span class="stringliteral">&quot;, &quot;</span> +</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                std::to_string(id_wiezienie) +</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="stringliteral">&quot;, &quot;</span> + (haslo.length() == 0 ? <span class="stringliteral">&quot;NULL&quot;</span> : <span class="stringliteral">&quot;&#39;&quot;</span> + haslo + <span class="stringliteral">&quot;&#39;&quot;</span>) + <span class="stringliteral">&quot;);&quot;</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">if</span> (stanowisko == <span class="stringliteral">&quot;Straznik&quot;</span>) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                zapytanie += <span class="stringliteral">&quot;INSERT INTO blok_pracownik VALUES \</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="stringliteral">                    (&quot;</span> + std::to_string(id_blok) +</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <span class="stringliteral">&quot;, &quot;</span> + std::to_string(<span class="keywordtype">id</span>) +</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    <span class="stringliteral">&quot;, &quot;</span> + (czas_pracy_od.length() == 0 ? <span class="stringliteral">&quot;NULL&quot;</span> : <span class="stringliteral">&quot;&#39;&quot;</span> + czas_pracy_od + <span class="stringliteral">&quot;&#39;&quot;</span>) +</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    <span class="stringliteral">&quot;, &quot;</span> + (czas_pracy_do.length() == 0 ? <span class="stringliteral">&quot;NULL&quot;</span> : <span class="stringliteral">&quot;&#39;&quot;</span> + czas_pracy_do + <span class="stringliteral">&quot;&#39;&quot;</span>) + <span class="stringliteral">&quot;);&quot;</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            baza.<a class="code" href="classBaza.html#a6b34cff393ec5d0856effb981881a183">query</a>&lt;&gt;(zapytanie);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">return</span> e.what();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructPracownik_html_a24481f354fd86b0055763a0f0de8599f"><div class="ttname"><a href="structPracownik.html#a24481f354fd86b0055763a0f0de8599f">Pracownik::Pracownik</a></div><div class="ttdeci">Pracownik(std::tuple&lt; PRACOWNIK_INFO &gt; const &amp;row)</div><div class="ttdoc">Konstruktor tworzacy obiekt pracownik z rekordu zwroconego z zapytania do bazy danych.</div><div class="ttdef"><b>Definition:</b> Pracownik.h:41</div></div>
+<div class="ttc" id="astructOsoba_html_a4b6ee9e4e073550f64230134249cd1f8"><div class="ttname"><a href="structOsoba.html#a4b6ee9e4e073550f64230134249cd1f8">Osoba::Pesel_arr</a></div><div class="ttdeci">static std::string Pesel_arr(std::string pesel)</div><div class="ttdoc">Metoda pozwalajaca na przeksztalcenie numeru pesel na format odpowiedni dla bazy danych.</div><div class="ttdef"><b>Definition:</b> Osoba.h:66</div></div>
+<div class="ttc" id="astructPracownik_html_a87a111855b497b902e767fa82c872a16"><div class="ttname"><a href="structPracownik.html#a87a111855b497b902e767fa82c872a16">Pracownik::Wstaw</a></div><div class="ttdeci">std::string Wstaw(Baza &amp;baza) override</div><div class="ttdoc">Metoda pozwalajaca na wstawienie nowego pracownika do bazy danych.</div><div class="ttdef"><b>Definition:</b> Pracownik.h:73</div></div>
+<div class="ttc" id="astructPracownik_html"><div class="ttname"><a href="structPracownik.html">Pracownik</a></div><div class="ttdoc">Struktura reprezentujaca pracownika wiezienia.</div><div class="ttdef"><b>Definition:</b> Pracownik.h:21</div></div>
+<div class="ttc" id="aclassBaza_html_a6b34cff393ec5d0856effb981881a183"><div class="ttname"><a href="classBaza.html#a6b34cff393ec5d0856effb981881a183">Baza::query</a></div><div class="ttdeci">auto query(std::string query_str)</div><div class="ttdoc">Metoda pozwalajaca na wywolanie zapytania ktore zwraca okreslone dane.</div><div class="ttdef"><b>Definition:</b> Baza.h:151</div></div>
+<div class="ttc" id="astructPracownik_html_aebd0ac7b45f0c16fe71672431da03a58"><div class="ttname"><a href="structPracownik.html#aebd0ac7b45f0c16fe71672431da03a58">Pracownik::Pracownik</a></div><div class="ttdeci">Pracownik(std::tuple&lt; PRACOWNIK_WSTAW &gt; const &amp;row)</div><div class="ttdoc">Konstruktor tworzacy obiekt pracownik z formularza.</div><div class="ttdef"><b>Definition:</b> Pracownik.h:57</div></div>
+<div class="ttc" id="astructPracownik_html_adae7e8f0ec1088ab80c4cbb3559cc628"><div class="ttname"><a href="structPracownik.html#adae7e8f0ec1088ab80c4cbb3559cc628">Pracownik::Pracownik</a></div><div class="ttdeci">Pracownik()</div><div class="ttdoc">Domyslny konstruktor.</div><div class="ttdef"><b>Definition:</b> Pracownik.h:35</div></div>
+<div class="ttc" id="aOsoba_8h_html"><div class="ttname"><a href="Osoba_8h.html">Osoba.h</a></div><div class="ttdoc">Plik zawierajacy klase reprezentujaca osobe.</div></div>
+<div class="ttc" id="aZajecia_8h_html"><div class="ttname"><a href="Zajecia_8h.html">Zajecia.h</a></div><div class="ttdoc">Plik zawierajacy strukture reprezentujaca zajecia resocjalizacyjne.</div></div>
+<div class="ttc" id="astructOsoba_html"><div class="ttname"><a href="structOsoba.html">Osoba</a></div><div class="ttdoc">Klasa reprezentujaca osobe.</div><div class="ttdef"><b>Definition:</b> Osoba.h:19</div></div>
+<div class="ttc" id="aclassBaza_html"><div class="ttname"><a href="classBaza.html">Baza</a></div><div class="ttdoc">Klasa reprezentujaca interfejs polaczeniowy miedzy baza danych a aplikacja.</div><div class="ttdef"><b>Definition:</b> Baza.h:20</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

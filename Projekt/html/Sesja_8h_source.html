@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prison database: Plik źródłowy include/Sesja.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Prison database
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Sesja.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Sesja_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Pracownik_8h.html">Pracownik.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Skazany_8h.html">Skazany.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structSesja.html">   19</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structSesja.html">Sesja</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classWindow.html">Window</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structSesja.html#a153c6d67d12384f8138200798d75ae85">   26</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="structSesja.html#a153c6d67d12384f8138200798d75ae85">Status</a>{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        NIEZALOGOWANY = 0,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        WIZYTATOR = 1,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        STRAZNIK = 2,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        INSTRUKTOR = 3,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        NACZELNIK = 4,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        SKAZANY = 5</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    };</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structSesja.html#af76debfb0a24bc2d9516c61b4cb11ddb">   38</a></span>&#160;    <a class="code" href="structSesja.html#af76debfb0a24bc2d9516c61b4cb11ddb">Sesja</a>() :status{ NIEZALOGOWANY } {}</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structSesja.html#ade6ee84d390bf8a9168b76e6397d8cfe">   44</a></span>&#160;    <a class="code" href="structSesja.html#ade6ee84d390bf8a9168b76e6397d8cfe">Sesja</a>(<a class="code" href="structPracownik.html">Pracownik</a> p)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        :id{ std::to_string(p.id) },</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        haslo{ p.haslo },</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        imie{ p.imie },</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        nazwisko{ p.nazwisko },</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        pesel{ p.pesel },</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        data_urodzenia{ p.data_urodzenia }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> (p.stanowisko == <span class="stringliteral">&quot;Straznik&quot;</span>)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            status = STRAZNIK;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.stanowisko == <span class="stringliteral">&quot;Naczelnik&quot;</span>)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            status = NACZELNIK;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.stanowisko == <span class="stringliteral">&quot;Instruktor&quot;</span>)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            status = INSTRUKTOR;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structSesja.html#ae5db39d0713785f49a4addead51709d4">   64</a></span>&#160;    <a class="code" href="structSesja.html#ae5db39d0713785f49a4addead51709d4">Sesja</a>(<a class="code" href="structSkazany.html">Skazany</a> s)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        :status{ SKAZANY },</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">id</span>{ std::to_string(s.id) },</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        haslo{ s.pesel },</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        imie{ s.imie },</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        nazwisko{ s.nazwisko },</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        pesel{ s.pesel },</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        data_urodzenia{ s.data_urodzenia }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {}</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="structSesja.html#ad6220962aa3e824e19126f85a7240fa2">   78</a></span>&#160;    std::tuple&lt;std::string, std::string, std::string, std::string, std::string&gt; <a class="code" href="structSesja.html#ad6220962aa3e824e19126f85a7240fa2">Dane</a>() {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> std::make_tuple(<span class="keywordtype">id</span>, imie, nazwisko, pesel, data_urodzenia);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="structSesja.html#a153c6d67d12384f8138200798d75ae85">Status</a> status;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    std::string <span class="keywordtype">id</span>{};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::string imie{};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    std::string nazwisko{};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::string pesel{};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    std::string data_urodzenia{};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    std::string haslo{};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructSesja_html"><div class="ttname"><a href="structSesja.html">Sesja</a></div><div class="ttdoc">Struktura zawierajaca informacje o zalogowanym uzytkowniku.</div><div class="ttdef"><b>Definition:</b> Sesja.h:19</div></div>
+<div class="ttc" id="astructSesja_html_a153c6d67d12384f8138200798d75ae85"><div class="ttname"><a href="structSesja.html#a153c6d67d12384f8138200798d75ae85">Sesja::Status</a></div><div class="ttdeci">Status</div><div class="ttdoc">Typ wyliczeniowy definiujacy sposob dostepu do bazy danych.</div><div class="ttdef"><b>Definition:</b> Sesja.h:26</div></div>
+<div class="ttc" id="aclassWindow_html"><div class="ttname"><a href="classWindow.html">Window</a></div><div class="ttdoc">klasa reprezentujaca okno kontekstowe oraz cala logike stojaca za wyswietlanymi tresciami</div><div class="ttdef"><b>Definition:</b> Window.h:30</div></div>
+<div class="ttc" id="astructSesja_html_ade6ee84d390bf8a9168b76e6397d8cfe"><div class="ttname"><a href="structSesja.html#ade6ee84d390bf8a9168b76e6397d8cfe">Sesja::Sesja</a></div><div class="ttdeci">Sesja(Pracownik p)</div><div class="ttdoc">Konstruktor tworzacy sesje na podstawie danych pracownika.</div><div class="ttdef"><b>Definition:</b> Sesja.h:44</div></div>
+<div class="ttc" id="astructSesja_html_ae5db39d0713785f49a4addead51709d4"><div class="ttname"><a href="structSesja.html#ae5db39d0713785f49a4addead51709d4">Sesja::Sesja</a></div><div class="ttdeci">Sesja(Skazany s)</div><div class="ttdoc">Konstruktor pozwalajacy na stworzenie sesji na podstawie zalogowanego skazanego.</div><div class="ttdef"><b>Definition:</b> Sesja.h:64</div></div>
+<div class="ttc" id="astructPracownik_html"><div class="ttname"><a href="structPracownik.html">Pracownik</a></div><div class="ttdoc">Struktura reprezentujaca pracownika wiezienia.</div><div class="ttdef"><b>Definition:</b> Pracownik.h:21</div></div>
+<div class="ttc" id="astructSkazany_html"><div class="ttname"><a href="structSkazany.html">Skazany</a></div><div class="ttdoc">Struktura reprezentujaca skazanego.</div><div class="ttdef"><b>Definition:</b> Skazany.h:22</div></div>
+<div class="ttc" id="aPracownik_8h_html"><div class="ttname"><a href="Pracownik_8h.html">Pracownik.h</a></div><div class="ttdoc">Plik zawierajacy strukture reprezentujaca pracownika wiezienia.</div></div>
+<div class="ttc" id="astructSesja_html_ad6220962aa3e824e19126f85a7240fa2"><div class="ttname"><a href="structSesja.html#ad6220962aa3e824e19126f85a7240fa2">Sesja::Dane</a></div><div class="ttdeci">std::tuple&lt; std::string, std::string, std::string, std::string, std::string &gt; Dane()</div><div class="ttdoc">Metoda zwracajaca dane przechowywane w sesji.</div><div class="ttdef"><b>Definition:</b> Sesja.h:78</div></div>
+<div class="ttc" id="astructSesja_html_af76debfb0a24bc2d9516c61b4cb11ddb"><div class="ttname"><a href="structSesja.html#af76debfb0a24bc2d9516c61b4cb11ddb">Sesja::Sesja</a></div><div class="ttdeci">Sesja()</div><div class="ttdoc">Domyslny konstruktor.</div><div class="ttdef"><b>Definition:</b> Sesja.h:38</div></div>
+<div class="ttc" id="aSkazany_8h_html"><div class="ttname"><a href="Skazany_8h.html">Skazany.h</a></div><div class="ttdoc">Plik zawierajacy strukture reprezentujaca skazanego.</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

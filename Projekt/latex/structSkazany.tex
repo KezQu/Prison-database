@@ -1,0 +1,133 @@
+\hypertarget{structSkazany}{}\doxysection{Dokumentacja struktury Skazany}
+\label{structSkazany}\index{Skazany@{Skazany}}
+
+
+Struktura reprezentujaca skazanego.  
+
+
+
+
+{\ttfamily \#include $<$Skazany.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Skazany
+% FIG 0
+
+
+Diagram współpracy dla Skazany\+:
+% FIG 1
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structSkazany_a8727987c0d3ebcf0bc777ea1a5fed1f3}{Skazany}} (std\+::tuple$<$ S\+K\+A\+Z\+A\+N\+Y\+\_\+\+I\+N\+FO $>$ const \&row)
+\begin{DoxyCompactList}\small\item\em Konstruktor pozwalajacy na stworzenie skazanego na podstawie rekordu zwroconego z bazy danych. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSkazany_a32596b5a323e06f4dac46f9d55c33d8d}{Skazany}} (std\+::tuple$<$ S\+K\+A\+Z\+A\+N\+Y\+\_\+\+W\+S\+T\+AW $>$ row)
+\begin{DoxyCompactList}\small\item\em Konstruktor pozwalajacy na stworzenie skazanego na podstawie danych z formularza. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structSkazany_a969ef19a4bd489dae831b2b3d72ed6a1}{Wstaw}} (\mbox{\hyperlink{classBaza}{Baza}} \&baza) override
+\begin{DoxyCompactList}\small\item\em Metoda pozwalajaca na dodanie nowego skazanego do bazy danych. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structSkazany_ad7ea91eb9ae9899f7b6a627fffff3c0d}\label{structSkazany_ad7ea91eb9ae9899f7b6a627fffff3c0d}} 
+int {\bfseries id\+\_\+cela} \{\}
+\item 
+\mbox{\Hypertarget{structSkazany_a00e272eb9cd59cf54bb85812d891c7d7}\label{structSkazany_a00e272eb9cd59cf54bb85812d891c7d7}} 
+int {\bfseries id\+\_\+zbrodnia} \{\}
+\item 
+\mbox{\Hypertarget{structSkazany_a7884e5780fa0fc9e2ae892adbe64d9fb}\label{structSkazany_a7884e5780fa0fc9e2ae892adbe64d9fb}} 
+std\+::string {\bfseries nazwa\+\_\+zbrodni}
+\item 
+\mbox{\Hypertarget{structSkazany_ae819881e2b89c8adfc7a4b5e4b85a8e7}\label{structSkazany_ae819881e2b89c8adfc7a4b5e4b85a8e7}} 
+std\+::string {\bfseries dlugosc\+\_\+pozbawienia\+\_\+wolnosci}
+\item 
+\mbox{\Hypertarget{structSkazany_ac7900a4078c8bfa2e80a1019663740a1}\label{structSkazany_ac7900a4078c8bfa2e80a1019663740a1}} 
+std\+::string {\bfseries opis\+\_\+zbrodni}
+\item 
+\mbox{\Hypertarget{structSkazany_ab0357e0917ba90073a741f5c12ebc6a5}\label{structSkazany_ab0357e0917ba90073a741f5c12ebc6a5}} 
+std\+::string {\bfseries nazwa\+\_\+pracy}
+\item 
+\mbox{\Hypertarget{structSkazany_a4a964acba6f18d1bdbdc322604da165f}\label{structSkazany_a4a964acba6f18d1bdbdc322604da165f}} 
+int {\bfseries wymiar\+\_\+godzin} \{\}
+\item 
+\mbox{\Hypertarget{structSkazany_a99a9c24cc060c97f58431e74b15e4f05}\label{structSkazany_a99a9c24cc060c97f58431e74b15e4f05}} 
+int {\bfseries ilosc\+\_\+zajec} \{\}
+\item 
+\mbox{\Hypertarget{structSkazany_a8198073a103dc2a4d5d47c73987865c4}\label{structSkazany_a8198073a103dc2a4d5d47c73987865c4}} 
+int {\bfseries ilosc\+\_\+wizytacji} \{\}
+\item 
+\mbox{\Hypertarget{structSkazany_a69682b3cb64fbf825f11b7f437ac667b}\label{structSkazany_a69682b3cb64fbf825f11b7f437ac667b}} 
+std\+::pair$<$ std\+::vector$<$ std\+::tuple$<$ std\+::string $>$ $>$, std\+::vector$<$ \mbox{\hyperlink{structGrupa}{Grupa}} $>$ $>$ {\bfseries zajecia\+\_\+vec}
+\item 
+\mbox{\Hypertarget{structSkazany_ae95ab8fcec86a737e82fa752af325e8c}\label{structSkazany_ae95ab8fcec86a737e82fa752af325e8c}} 
+std\+::vector$<$ std\+::tuple$<$ std\+::string, std\+::string $>$ $>$ {\bfseries wizytacje\+\_\+vec}
+\end{DoxyCompactItemize}
+\doxysubsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\doxysubsection{Opis szczegółowy}
+Struktura reprezentujaca skazanego. 
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{structSkazany_a8727987c0d3ebcf0bc777ea1a5fed1f3}\label{structSkazany_a8727987c0d3ebcf0bc777ea1a5fed1f3}} 
+\index{Skazany@{Skazany}!Skazany@{Skazany}}
+\index{Skazany@{Skazany}!Skazany@{Skazany}}
+\doxysubsubsection{\texorpdfstring{Skazany()}{Skazany()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Skazany\+::\+Skazany (\begin{DoxyParamCaption}\item[{std\+::tuple$<$ S\+K\+A\+Z\+A\+N\+Y\+\_\+\+I\+N\+FO $>$ const \&}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor pozwalajacy na stworzenie skazanego na podstawie rekordu zwroconego z bazy danych. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em row} & rekord zwrocony z bazy danych \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structSkazany_a32596b5a323e06f4dac46f9d55c33d8d}\label{structSkazany_a32596b5a323e06f4dac46f9d55c33d8d}} 
+\index{Skazany@{Skazany}!Skazany@{Skazany}}
+\index{Skazany@{Skazany}!Skazany@{Skazany}}
+\doxysubsubsection{\texorpdfstring{Skazany()}{Skazany()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Skazany\+::\+Skazany (\begin{DoxyParamCaption}\item[{std\+::tuple$<$ S\+K\+A\+Z\+A\+N\+Y\+\_\+\+W\+S\+T\+AW $>$}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor pozwalajacy na stworzenie skazanego na podstawie danych z formularza. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em row} & dane zwrocone z formularza \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{structSkazany_a969ef19a4bd489dae831b2b3d72ed6a1}\label{structSkazany_a969ef19a4bd489dae831b2b3d72ed6a1}} 
+\index{Skazany@{Skazany}!Wstaw@{Wstaw}}
+\index{Wstaw@{Wstaw}!Skazany@{Skazany}}
+\doxysubsubsection{\texorpdfstring{Wstaw()}{Wstaw()}}
+{\footnotesize\ttfamily std\+::string Skazany\+::\+Wstaw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBaza}{Baza}} \&}]{baza }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Metoda pozwalajaca na dodanie nowego skazanego do bazy danych. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em baza} & interfejs bazodanowy, wykorzystany do wstawienia danych \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+std\+::string ewentualne tresci bledow 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{structObiekt_ad08455c8a0f242bec037c3c5c8f13b40}{Obiekt}}.
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Skazany_8h}{Skazany.\+h}}\end{DoxyCompactItemize}

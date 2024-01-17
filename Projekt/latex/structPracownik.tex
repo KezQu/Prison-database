@@ -1,0 +1,139 @@
+\hypertarget{structPracownik}{}\doxysection{Dokumentacja struktury Pracownik}
+\label{structPracownik}\index{Pracownik@{Pracownik}}
+
+
+Struktura reprezentujaca pracownika wiezienia.  
+
+
+
+
+{\ttfamily \#include $<$Pracownik.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Pracownik
+% FIG 0
+
+
+Diagram współpracy dla Pracownik\+:
+% FIG 1
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structPracownik_adae7e8f0ec1088ab80c4cbb3559cc628}{Pracownik}} ()
+\begin{DoxyCompactList}\small\item\em Domyslny konstruktor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structPracownik_a24481f354fd86b0055763a0f0de8599f}{Pracownik}} (std\+::tuple$<$ P\+R\+A\+C\+O\+W\+N\+I\+K\+\_\+\+I\+N\+FO $>$ const \&row)
+\begin{DoxyCompactList}\small\item\em Konstruktor tworzacy obiekt pracownik z rekordu zwroconego z zapytania do bazy danych. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structPracownik_aebd0ac7b45f0c16fe71672431da03a58}{Pracownik}} (std\+::tuple$<$ P\+R\+A\+C\+O\+W\+N\+I\+K\+\_\+\+W\+S\+T\+AW $>$ const \&row)
+\begin{DoxyCompactList}\small\item\em Konstruktor tworzacy obiekt pracownik z formularza. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structPracownik_a87a111855b497b902e767fa82c872a16}{Wstaw}} (\mbox{\hyperlink{classBaza}{Baza}} \&baza) override
+\begin{DoxyCompactList}\small\item\em Metoda pozwalajaca na wstawienie nowego pracownika do bazy danych. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structPracownik_a6f9dae4ee7e0b20b5f6c59f0e96c367c}\label{structPracownik_a6f9dae4ee7e0b20b5f6c59f0e96c367c}} 
+std\+::string {\bfseries stanowisko}
+\item 
+\mbox{\Hypertarget{structPracownik_a1d5978fffcb2cdb43dedf35cef92ecf7}\label{structPracownik_a1d5978fffcb2cdb43dedf35cef92ecf7}} 
+int {\bfseries id\+\_\+wiezienie} \{\}
+\item 
+\mbox{\Hypertarget{structPracownik_aff5fe0c810a9d01b88bb68bd841f9462}\label{structPracownik_aff5fe0c810a9d01b88bb68bd841f9462}} 
+std\+::string {\bfseries haslo}
+\item 
+\mbox{\Hypertarget{structPracownik_ab1edb846441462f13d5435fb57f75a37}\label{structPracownik_ab1edb846441462f13d5435fb57f75a37}} 
+int {\bfseries id\+\_\+blok} \{\}
+\item 
+\mbox{\Hypertarget{structPracownik_a0ad2f89a0fc7790a45825b664c4d832f}\label{structPracownik_a0ad2f89a0fc7790a45825b664c4d832f}} 
+std\+::string {\bfseries nazwa\+\_\+bloku}
+\item 
+\mbox{\Hypertarget{structPracownik_a8ce5e0de864884f12ad9767cc3262b84}\label{structPracownik_a8ce5e0de864884f12ad9767cc3262b84}} 
+std\+::string {\bfseries czas\+\_\+pracy\+\_\+od}
+\item 
+\mbox{\Hypertarget{structPracownik_a6330d20512015b9a4a4ff0de9633c021}\label{structPracownik_a6330d20512015b9a4a4ff0de9633c021}} 
+std\+::string {\bfseries czas\+\_\+pracy\+\_\+do}
+\item 
+\mbox{\Hypertarget{structPracownik_ad1a35a1e04ca1e7c2124a56674a53fe8}\label{structPracownik_ad1a35a1e04ca1e7c2124a56674a53fe8}} 
+std\+::vector$<$ \mbox{\hyperlink{structZajecia}{Zajecia}} $>$ {\bfseries zajecia}
+\item 
+\mbox{\Hypertarget{structPracownik_ae71b73fdfaf1ad521f358dc31b6ed210}\label{structPracownik_ae71b73fdfaf1ad521f358dc31b6ed210}} 
+int {\bfseries ilosc\+\_\+zajec} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\doxysubsection{Opis szczegółowy}
+Struktura reprezentujaca pracownika wiezienia. 
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{structPracownik_adae7e8f0ec1088ab80c4cbb3559cc628}\label{structPracownik_adae7e8f0ec1088ab80c4cbb3559cc628}} 
+\index{Pracownik@{Pracownik}!Pracownik@{Pracownik}}
+\index{Pracownik@{Pracownik}!Pracownik@{Pracownik}}
+\doxysubsubsection{\texorpdfstring{Pracownik()}{Pracownik()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Pracownik\+::\+Pracownik (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Domyslny konstruktor. 
+
+\mbox{\Hypertarget{structPracownik_a24481f354fd86b0055763a0f0de8599f}\label{structPracownik_a24481f354fd86b0055763a0f0de8599f}} 
+\index{Pracownik@{Pracownik}!Pracownik@{Pracownik}}
+\index{Pracownik@{Pracownik}!Pracownik@{Pracownik}}
+\doxysubsubsection{\texorpdfstring{Pracownik()}{Pracownik()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Pracownik\+::\+Pracownik (\begin{DoxyParamCaption}\item[{std\+::tuple$<$ P\+R\+A\+C\+O\+W\+N\+I\+K\+\_\+\+I\+N\+FO $>$ const \&}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor tworzacy obiekt pracownik z rekordu zwroconego z zapytania do bazy danych. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em row} & rekord zwrocony z bazy danych \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structPracownik_aebd0ac7b45f0c16fe71672431da03a58}\label{structPracownik_aebd0ac7b45f0c16fe71672431da03a58}} 
+\index{Pracownik@{Pracownik}!Pracownik@{Pracownik}}
+\index{Pracownik@{Pracownik}!Pracownik@{Pracownik}}
+\doxysubsubsection{\texorpdfstring{Pracownik()}{Pracownik()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Pracownik\+::\+Pracownik (\begin{DoxyParamCaption}\item[{std\+::tuple$<$ P\+R\+A\+C\+O\+W\+N\+I\+K\+\_\+\+W\+S\+T\+AW $>$ const \&}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor tworzacy obiekt pracownik z formularza. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em row} & dane pobrane z formularza \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{structPracownik_a87a111855b497b902e767fa82c872a16}\label{structPracownik_a87a111855b497b902e767fa82c872a16}} 
+\index{Pracownik@{Pracownik}!Wstaw@{Wstaw}}
+\index{Wstaw@{Wstaw}!Pracownik@{Pracownik}}
+\doxysubsubsection{\texorpdfstring{Wstaw()}{Wstaw()}}
+{\footnotesize\ttfamily std\+::string Pracownik\+::\+Wstaw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBaza}{Baza}} \&}]{baza }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Metoda pozwalajaca na wstawienie nowego pracownika do bazy danych. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em baza} & Interfejs polaczeniowy na interesujacej nas bazy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+std\+::string tresci ewentualnych bledow 
+\end{DoxyReturn}
+
+
+Implementuje \mbox{\hyperlink{structObiekt_ad08455c8a0f242bec037c3c5c8f13b40}{Obiekt}}.
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Pracownik_8h}{Pracownik.\+h}}\end{DoxyCompactItemize}

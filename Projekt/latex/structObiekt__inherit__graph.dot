@@ -1,0 +1,19 @@
+digraph "Obiekt"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Obiekt",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Struktura przedstawiajaca najbardizej podstawowy obiekt bazy danych."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Grupa",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structGrupa.html",tooltip="Struktura ktora przedstawia grupe zajeciowa o polach jak w bazie danych."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Osoba",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOsoba.html",tooltip="Klasa reprezentujaca osobe."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Pracownik",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structPracownik.html",tooltip="Struktura reprezentujaca pracownika wiezienia."];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Skazany",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structSkazany.html",tooltip="Struktura reprezentujaca skazanego."];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Wizytator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWizytator.html",tooltip="Struktura reprezentujaca wizytatora."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Zajecia",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structZajecia.html",tooltip="Struktura reprezentujaca zajecia resocjalizacyjne."];
+}

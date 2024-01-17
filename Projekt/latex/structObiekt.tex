@@ -1,0 +1,111 @@
+\hypertarget{structObiekt}{}\doxysection{Dokumentacja struktury Obiekt}
+\label{structObiekt}\index{Obiekt@{Obiekt}}
+
+
+Struktura przedstawiajaca najbardizej podstawowy obiekt bazy danych.  
+
+
+
+
+{\ttfamily \#include $<$Obiekt.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Obiekt
+% FIG 0
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structObiekt_a8fca422d262d9558bbcea7a0c3cf3cdc}{Obiekt}} (int new\+\_\+id=0)
+\begin{DoxyCompactList}\small\item\em Konstruktor pozwalajacy na stworzenie nowego obiektu. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structObiekt_ad08455c8a0f242bec037c3c5c8f13b40}{Wstaw}} (\mbox{\hyperlink{classBaza}{Baza}} \&baza)=0
+\begin{DoxyCompactList}\small\item\em Abstrakcyjna metoda majaca na celu ujednolicenie interfejsu do wstawiania danych do bazy. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{structObiekt_ad5aa1a563be270e573d1ef21723256d1}{Edytuj}} (\mbox{\hyperlink{classBaza}{Baza}} \&baza)
+\begin{DoxyCompactList}\small\item\em Abstrakcyjna metoda majaca na celu ujednolicenie interfejsu do edytowania danych w bazie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structObiekt_aec3c55e0f6931424c7fe3cdeba4261ef}\label{structObiekt_aec3c55e0f6931424c7fe3cdeba4261ef}} 
+static auto {\bfseries id\+\_\+szukanie} (\mbox{\hyperlink{classBaza}{Baza}} \&baza, std\+::string zapytanie)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structObiekt_a980ce86b7b29479d1442509ec48649ba}\label{structObiekt_a980ce86b7b29479d1442509ec48649ba}} 
+int {\bfseries id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Struktura przedstawiajaca najbardizej podstawowy obiekt bazy danych. 
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{structObiekt_a8fca422d262d9558bbcea7a0c3cf3cdc}\label{structObiekt_a8fca422d262d9558bbcea7a0c3cf3cdc}} 
+\index{Obiekt@{Obiekt}!Obiekt@{Obiekt}}
+\index{Obiekt@{Obiekt}!Obiekt@{Obiekt}}
+\doxysubsubsection{\texorpdfstring{Obiekt()}{Obiekt()}}
+{\footnotesize\ttfamily Obiekt\+::\+Obiekt (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+id = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor pozwalajacy na stworzenie nowego obiektu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em new\+\_\+id} & ID nowego obiektu \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{structObiekt_ad5aa1a563be270e573d1ef21723256d1}\label{structObiekt_ad5aa1a563be270e573d1ef21723256d1}} 
+\index{Obiekt@{Obiekt}!Edytuj@{Edytuj}}
+\index{Edytuj@{Edytuj}!Obiekt@{Obiekt}}
+\doxysubsubsection{\texorpdfstring{Edytuj()}{Edytuj()}}
+{\footnotesize\ttfamily virtual std\+::string Obiekt\+::\+Edytuj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBaza}{Baza}} \&}]{baza }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Abstrakcyjna metoda majaca na celu ujednolicenie interfejsu do edytowania danych w bazie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em baza} & interfejs polaczeniowy do bazy uzyty do wykonania zadanych transakcji \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+std\+::string tresc ewentualnych bledow 
+\end{DoxyReturn}
+
+
+Reimplementowana w \mbox{\hyperlink{structZajecia_a5da4b8358893d77c9742f2e517ed3afd}{Zajecia}}.
+
+\mbox{\Hypertarget{structObiekt_ad08455c8a0f242bec037c3c5c8f13b40}\label{structObiekt_ad08455c8a0f242bec037c3c5c8f13b40}} 
+\index{Obiekt@{Obiekt}!Wstaw@{Wstaw}}
+\index{Wstaw@{Wstaw}!Obiekt@{Obiekt}}
+\doxysubsubsection{\texorpdfstring{Wstaw()}{Wstaw()}}
+{\footnotesize\ttfamily virtual std\+::string Obiekt\+::\+Wstaw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBaza}{Baza}} \&}]{baza }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstrakcyjna metoda majaca na celu ujednolicenie interfejsu do wstawiania danych do bazy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em baza} & interfejs polaczeniowy do bazy uzyty do wykonania zadanych transakcji \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+std\+::string tresc ewentualnych bledow 
+\end{DoxyReturn}
+
+
+Implementowany w \mbox{\hyperlink{structPracownik_a87a111855b497b902e767fa82c872a16}{Pracownik}}, \mbox{\hyperlink{structSkazany_a969ef19a4bd489dae831b2b3d72ed6a1}{Skazany}}, \mbox{\hyperlink{structZajecia_abd5857b743505204ebc2269fd62e2998}{Zajecia}}, \mbox{\hyperlink{structGrupa_a4ab460b00882d2c05475e55275d625eb}{Grupa}} i \mbox{\hyperlink{structWizytator_a6ec4e8ca7e8cea5b199c3f636b7f4aae}{Wizytator}}.
+
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Obiekt_8h}{Obiekt.\+h}}\end{DoxyCompactItemize}

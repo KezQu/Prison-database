@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prison database: Plik źródłowy include/Grupa.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Prison database
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Grupa.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Grupa_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define GRUPA_INFO int, int, std::string, std::string</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structGrupa.html">   18</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structGrupa.html">Grupa</a> : <span class="keyword">public</span> <a class="code" href="structObiekt.html">Obiekt</a>{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> id_zajecia;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::string zajecia_od{<span class="stringliteral">&quot;00:00&quot;</span>};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::string zajecia_do{<span class="stringliteral">&quot;00:00&quot;</span>};</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structGrupa.html#ad65647d4487228866780832362578b8e">   28</a></span>&#160;    <a class="code" href="structGrupa.html#ad65647d4487228866780832362578b8e">Grupa</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> new_id_zajecia)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        :<a class="code" href="structObiekt.html">Obiekt</a>{ <span class="keywordtype">id</span> },</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        id_zajecia{ new_id_zajecia }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {}</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structGrupa.html#ab4a8265104d5df9abeddb5eb574b931b">   37</a></span>&#160;    <a class="code" href="structGrupa.html#ab4a8265104d5df9abeddb5eb574b931b">Grupa</a>(std::tuple&lt;GRUPA_INFO&gt; <span class="keyword">const</span>&amp; row)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        :<a class="code" href="structObiekt.html">Obiekt</a>{std::get&lt;0&gt;(row)},</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        id_zajecia{std::get&lt;1&gt;(row)},</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        zajecia_od{ std::get&lt;2&gt;(row) },</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        zajecia_do{ std::get&lt;3&gt;(row) }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {}</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="structGrupa.html#a4ab460b00882d2c05475e55275d625eb">   49</a></span>&#160;    std::string <a class="code" href="structGrupa.html#a4ab460b00882d2c05475e55275d625eb">Wstaw</a>(<a class="code" href="classBaza.html">Baza</a>&amp; baza)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            baza.<a class="code" href="classBaza.html#a6b34cff393ec5d0856effb981881a183">query</a>(<span class="stringliteral">&quot;INSERT INTO grupa_zajeciowa VALUES (&quot;</span> +</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                std::to_string(<span class="keywordtype">id</span>) +</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="stringliteral">&quot;, &#39;&quot;</span> + std::to_string(id_zajecia)+<span class="stringliteral">&quot;&#39;&quot;</span> +</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="stringliteral">&quot;, &quot;</span> + (zajecia_od.length() == 0 ? <span class="stringliteral">&quot;NULL&quot;</span> : <span class="stringliteral">&quot;&#39;&quot;</span> + zajecia_od + <span class="stringliteral">&quot;&#39;&quot;</span>) +</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="stringliteral">&quot;, &quot;</span> + (zajecia_do.length() == 0 ? <span class="stringliteral">&quot;NULL&quot;</span> : <span class="stringliteral">&quot;&#39;&quot;</span> + zajecia_do + <span class="stringliteral">&quot;&#39;&quot;</span>) + <span class="stringliteral">&quot;);&quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> e.what();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructGrupa_html"><div class="ttname"><a href="structGrupa.html">Grupa</a></div><div class="ttdoc">Struktura ktora przedstawia grupe zajeciowa o polach jak w bazie danych.</div><div class="ttdef"><b>Definition:</b> Grupa.h:18</div></div>
+<div class="ttc" id="astructGrupa_html_ad65647d4487228866780832362578b8e"><div class="ttname"><a href="structGrupa.html#ad65647d4487228866780832362578b8e">Grupa::Grupa</a></div><div class="ttdeci">Grupa(int id, int new_id_zajecia)</div><div class="ttdoc">Konstruktor pozwalajacy na stworzenie nowej grupy.</div><div class="ttdef"><b>Definition:</b> Grupa.h:28</div></div>
+<div class="ttc" id="astructObiekt_html"><div class="ttname"><a href="structObiekt.html">Obiekt</a></div><div class="ttdoc">Struktura przedstawiajaca najbardizej podstawowy obiekt bazy danych.</div><div class="ttdef"><b>Definition:</b> Obiekt.h:17</div></div>
+<div class="ttc" id="astructGrupa_html_a4ab460b00882d2c05475e55275d625eb"><div class="ttname"><a href="structGrupa.html#a4ab460b00882d2c05475e55275d625eb">Grupa::Wstaw</a></div><div class="ttdeci">std::string Wstaw(Baza &amp;baza) override</div><div class="ttdoc">Metoda pozwalajaca na wstawienie nowej grupy do bazy danych.</div><div class="ttdef"><b>Definition:</b> Grupa.h:49</div></div>
+<div class="ttc" id="aclassBaza_html_a6b34cff393ec5d0856effb981881a183"><div class="ttname"><a href="classBaza.html#a6b34cff393ec5d0856effb981881a183">Baza::query</a></div><div class="ttdeci">auto query(std::string query_str)</div><div class="ttdoc">Metoda pozwalajaca na wywolanie zapytania ktore zwraca okreslone dane.</div><div class="ttdef"><b>Definition:</b> Baza.h:151</div></div>
+<div class="ttc" id="astructGrupa_html_ab4a8265104d5df9abeddb5eb574b931b"><div class="ttname"><a href="structGrupa.html#ab4a8265104d5df9abeddb5eb574b931b">Grupa::Grupa</a></div><div class="ttdeci">Grupa(std::tuple&lt; GRUPA_INFO &gt; const &amp;row)</div><div class="ttdoc">Konstruktor pozwalajacy na stworzenie obiektu z danych uzyskanych przy pomocy zapytania do bazy danyc...</div><div class="ttdef"><b>Definition:</b> Grupa.h:37</div></div>
+<div class="ttc" id="aclassBaza_html"><div class="ttname"><a href="classBaza.html">Baza</a></div><div class="ttdoc">Klasa reprezentujaca interfejs polaczeniowy miedzy baza danych a aplikacja.</div><div class="ttdef"><b>Definition:</b> Baza.h:20</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

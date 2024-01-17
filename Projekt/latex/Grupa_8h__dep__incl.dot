@@ -1,0 +1,22 @@
+digraph "include/Grupa.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="include/Grupa.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Plik zawierajacy obiket reprezentujacy grupe zajeciowa."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="include/Zajecia.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Zajecia_8h.html",tooltip="Plik zawierajacy strukture reprezentujaca zajecia resocjalizacyjne."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="include/Pracownik.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Pracownik_8h.html",tooltip="Plik zawierajacy strukture reprezentujaca pracownika wiezienia."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="include/Sesja.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Sesja_8h.html",tooltip="Plik zawierajacy strukture reprezentujaca sesje."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="include/Window.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Window_8h.html",tooltip="Plik zawierajacy klase reprezentujaca okno kontekstowe oraz cala logike stojaca za wyswietlanymi tres..."];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="include/Skazany.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Skazany_8h.html",tooltip="Plik zawierajacy strukture reprezentujaca skazanego."];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prison database: Plik źródłowy include/Obiekt.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Prison database
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Obiekt.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Obiekt_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Baza_8h.html">Baza.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structObiekt.html">   17</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structObiekt.html">Obiekt</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> id;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structObiekt.html#a8fca422d262d9558bbcea7a0c3cf3cdc">   24</a></span>&#160;    <a class="code" href="structObiekt.html#a8fca422d262d9558bbcea7a0c3cf3cdc">Obiekt</a>(<span class="keywordtype">int</span> new_id = 0) : id{ new_id } </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">static</span> <span class="keyword">auto</span> id_szukanie(<a class="code" href="classBaza.html">Baza</a>&amp; baza, std::string zapytanie) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">unsigned</span> wolne_id{ 1 };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">auto</span> ids = baza.<a class="code" href="classBaza.html#a6b34cff393ec5d0856effb981881a183">query</a>&lt;<span class="keywordtype">unsigned</span>&gt;(zapytanie);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [<span class="keywordtype">id</span>] : ids) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span> (<span class="keywordtype">id</span> == wolne_id) wolne_id++;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">return</span> wolne_id;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="structObiekt.html#ad08455c8a0f242bec037c3c5c8f13b40">Wstaw</a>(<a class="code" href="classBaza.html">Baza</a>&amp; baza) = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structObiekt.html#ad5aa1a563be270e573d1ef21723256d1">   47</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="structObiekt.html#ad5aa1a563be270e573d1ef21723256d1">Edytuj</a>(<a class="code" href="classBaza.html">Baza</a>&amp; baza) { <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>; };</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructObiekt_html_ad5aa1a563be270e573d1ef21723256d1"><div class="ttname"><a href="structObiekt.html#ad5aa1a563be270e573d1ef21723256d1">Obiekt::Edytuj</a></div><div class="ttdeci">virtual std::string Edytuj(Baza &amp;baza)</div><div class="ttdoc">Abstrakcyjna metoda majaca na celu ujednolicenie interfejsu do edytowania danych w bazie.</div><div class="ttdef"><b>Definition:</b> Obiekt.h:47</div></div>
+<div class="ttc" id="astructObiekt_html_ad08455c8a0f242bec037c3c5c8f13b40"><div class="ttname"><a href="structObiekt.html#ad08455c8a0f242bec037c3c5c8f13b40">Obiekt::Wstaw</a></div><div class="ttdeci">virtual std::string Wstaw(Baza &amp;baza)=0</div><div class="ttdoc">Abstrakcyjna metoda majaca na celu ujednolicenie interfejsu do wstawiania danych do bazy.</div></div>
+<div class="ttc" id="astructObiekt_html_a8fca422d262d9558bbcea7a0c3cf3cdc"><div class="ttname"><a href="structObiekt.html#a8fca422d262d9558bbcea7a0c3cf3cdc">Obiekt::Obiekt</a></div><div class="ttdeci">Obiekt(int new_id=0)</div><div class="ttdoc">Konstruktor pozwalajacy na stworzenie nowego obiektu.</div><div class="ttdef"><b>Definition:</b> Obiekt.h:24</div></div>
+<div class="ttc" id="astructObiekt_html"><div class="ttname"><a href="structObiekt.html">Obiekt</a></div><div class="ttdoc">Struktura przedstawiajaca najbardizej podstawowy obiekt bazy danych.</div><div class="ttdef"><b>Definition:</b> Obiekt.h:17</div></div>
+<div class="ttc" id="aclassBaza_html_a6b34cff393ec5d0856effb981881a183"><div class="ttname"><a href="classBaza.html#a6b34cff393ec5d0856effb981881a183">Baza::query</a></div><div class="ttdeci">auto query(std::string query_str)</div><div class="ttdoc">Metoda pozwalajaca na wywolanie zapytania ktore zwraca okreslone dane.</div><div class="ttdef"><b>Definition:</b> Baza.h:151</div></div>
+<div class="ttc" id="aBaza_8h_html"><div class="ttname"><a href="Baza_8h.html">Baza.h</a></div><div class="ttdoc">Plik zawierajacy klase reprezentujaca interfejs pomiedzy baza a aplikacja.</div></div>
+<div class="ttc" id="aclassBaza_html"><div class="ttname"><a href="classBaza.html">Baza</a></div><div class="ttdoc">Klasa reprezentujaca interfejs polaczeniowy miedzy baza danych a aplikacja.</div><div class="ttdef"><b>Definition:</b> Baza.h:20</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

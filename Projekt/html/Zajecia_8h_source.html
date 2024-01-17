@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prison database: Plik źródłowy include/Zajecia.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Prison database
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Zajecia.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Zajecia_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Obiekt_8h.html">Obiekt.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Grupa_8h.html">Grupa.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define ZAJECIA_INFO int, std::string, std::string, int, std::string, std::string</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structZajecia.html">   20</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structZajecia.html">Zajecia</a> : <span class="keyword">public</span> <a class="code" href="structObiekt.html">Obiekt</a>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::string nazwa_zajec;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::string opis_zajec;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> id_pracownik{};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::string imie;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::string nazwisko;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::vector&lt;Grupa&gt; grupa_vec;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structZajecia.html#ad33bbfe71ea80bd3d32d5aedeea828bf">   31</a></span>&#160;    <a class="code" href="structZajecia.html#ad33bbfe71ea80bd3d32d5aedeea828bf">Zajecia</a>() {}</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structZajecia.html#ad8330be489100ba5c30fbe69e300fef3">   37</a></span>&#160;    <a class="code" href="structZajecia.html#ad8330be489100ba5c30fbe69e300fef3">Zajecia</a>(std::tuple&lt;ZAJECIA_INFO&gt; <span class="keyword">const</span>&amp; row)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        :<a class="code" href="structObiekt.html">Obiekt</a>{ std::get&lt;0&gt;(row) },</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        nazwa_zajec{ std::get&lt;1&gt;(row) },</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        opis_zajec{ std::get&lt;2&gt;(row) },</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        id_pracownik{ std::get&lt;3&gt;(row) },</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        imie{ std::get&lt;4&gt;(row) },</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        nazwisko{ std::get&lt;5&gt;(row) }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {}</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="structZajecia.html#abd5857b743505204ebc2269fd62e2998">   51</a></span>&#160;    std::string <a class="code" href="structZajecia.html#abd5857b743505204ebc2269fd62e2998">Wstaw</a>(<a class="code" href="classBaza.html">Baza</a>&amp; baza)<span class="keyword"> override</span>{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            baza.<a class="code" href="classBaza.html#a6b34cff393ec5d0856effb981881a183">query</a>(<span class="stringliteral">&quot;INSERT INTO zajecia_resocjalizacyjne VALUES (&quot;</span> +</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                std::to_string(<span class="keywordtype">id</span>) +</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="stringliteral">&quot;, &quot;</span> + (nazwa_zajec.length() == 0 ? <span class="stringliteral">&quot;NULL&quot;</span> : <span class="stringliteral">&quot;&#39;&quot;</span> + nazwa_zajec + <span class="stringliteral">&quot;&#39;&quot;</span>) +</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="stringliteral">&quot;, &quot;</span> + (opis_zajec.length() == 0 ? <span class="stringliteral">&quot;NULL&quot;</span> : <span class="stringliteral">&quot;&#39;&quot;</span> + opis_zajec + <span class="stringliteral">&quot;&#39;&quot;</span>) +</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="stringliteral">&quot;, &quot;</span> + std::to_string(id_pracownik) + <span class="stringliteral">&quot;);&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">return</span> e.what();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="structZajecia.html#a5da4b8358893d77c9742f2e517ed3afd">   70</a></span>&#160;    std::string <a class="code" href="structZajecia.html#a5da4b8358893d77c9742f2e517ed3afd">Edytuj</a>(<a class="code" href="classBaza.html">Baza</a>&amp; baza)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            std::string zapytanie = <span class="stringliteral">&quot;UPDATE zajecia_resocjalizacyjne \</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="stringliteral">                SET opis_zajec = &quot;</span> + (opis_zajec.length() == 0 ? <span class="stringliteral">&quot;NULL&quot;</span> : <span class="stringliteral">&quot;&#39;&quot;</span> + opis_zajec + <span class="stringliteral">&quot;&#39;&quot;</span>) +</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="stringliteral">&quot; WHERE id_zajecia = &quot;</span> + std::to_string(<span class="keywordtype">id</span>) + <span class="stringliteral">&quot;;&quot;</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; grupa : grupa_vec) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                zapytanie += <span class="stringliteral">&quot;UPDATE grupa_zajeciowa \</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="stringliteral">                    SET zajecia_od = &quot;</span> + (grupa.zajecia_od.length() == 0 ? <span class="stringliteral">&quot;NULL&quot;</span> : <span class="stringliteral">&quot;&#39;&quot;</span> + grupa.zajecia_od + <span class="stringliteral">&quot;&#39;&quot;</span>) +</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    <span class="stringliteral">&quot;, zajecia_do = &quot;</span> + (grupa.zajecia_do.length() == 0 ? <span class="stringliteral">&quot;NULL&quot;</span> : <span class="stringliteral">&quot;&#39;&quot;</span> + grupa.zajecia_do + <span class="stringliteral">&quot;&#39;&quot;</span>) +</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    <span class="stringliteral">&quot; WHERE id_grupa = &quot;</span> + std::to_string(grupa.id) + <span class="stringliteral">&quot;;&quot;</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            baza.<a class="code" href="classBaza.html#a6b34cff393ec5d0856effb981881a183">query</a>(zapytanie);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">catch</span> (std::exception&amp; e) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">return</span> e.what();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructZajecia_html_ad33bbfe71ea80bd3d32d5aedeea828bf"><div class="ttname"><a href="structZajecia.html#ad33bbfe71ea80bd3d32d5aedeea828bf">Zajecia::Zajecia</a></div><div class="ttdeci">Zajecia()</div><div class="ttdoc">Domyslny konstruktor.</div><div class="ttdef"><b>Definition:</b> Zajecia.h:31</div></div>
+<div class="ttc" id="astructZajecia_html"><div class="ttname"><a href="structZajecia.html">Zajecia</a></div><div class="ttdoc">Struktura reprezentujaca zajecia resocjalizacyjne.</div><div class="ttdef"><b>Definition:</b> Zajecia.h:20</div></div>
+<div class="ttc" id="astructObiekt_html"><div class="ttname"><a href="structObiekt.html">Obiekt</a></div><div class="ttdoc">Struktura przedstawiajaca najbardizej podstawowy obiekt bazy danych.</div><div class="ttdef"><b>Definition:</b> Obiekt.h:17</div></div>
+<div class="ttc" id="aclassBaza_html_a6b34cff393ec5d0856effb981881a183"><div class="ttname"><a href="classBaza.html#a6b34cff393ec5d0856effb981881a183">Baza::query</a></div><div class="ttdeci">auto query(std::string query_str)</div><div class="ttdoc">Metoda pozwalajaca na wywolanie zapytania ktore zwraca okreslone dane.</div><div class="ttdef"><b>Definition:</b> Baza.h:151</div></div>
+<div class="ttc" id="astructZajecia_html_ad8330be489100ba5c30fbe69e300fef3"><div class="ttname"><a href="structZajecia.html#ad8330be489100ba5c30fbe69e300fef3">Zajecia::Zajecia</a></div><div class="ttdeci">Zajecia(std::tuple&lt; ZAJECIA_INFO &gt; const &amp;row)</div><div class="ttdoc">Konstruktor pozwalajacy na stworzenie nowych zajec na podstawie rekordu z bazy danych.</div><div class="ttdef"><b>Definition:</b> Zajecia.h:37</div></div>
+<div class="ttc" id="astructZajecia_html_a5da4b8358893d77c9742f2e517ed3afd"><div class="ttname"><a href="structZajecia.html#a5da4b8358893d77c9742f2e517ed3afd">Zajecia::Edytuj</a></div><div class="ttdeci">std::string Edytuj(Baza &amp;baza) override</div><div class="ttdoc">Metoda pozwalajaca na edytowanie zajec w bazie danych.</div><div class="ttdef"><b>Definition:</b> Zajecia.h:70</div></div>
+<div class="ttc" id="aGrupa_8h_html"><div class="ttname"><a href="Grupa_8h.html">Grupa.h</a></div><div class="ttdoc">Plik zawierajacy obiket reprezentujacy grupe zajeciowa.</div></div>
+<div class="ttc" id="astructZajecia_html_abd5857b743505204ebc2269fd62e2998"><div class="ttname"><a href="structZajecia.html#abd5857b743505204ebc2269fd62e2998">Zajecia::Wstaw</a></div><div class="ttdeci">std::string Wstaw(Baza &amp;baza) override</div><div class="ttdoc">Metoda pozwalajaca na wstawienie nowych zajec do bazy.</div><div class="ttdef"><b>Definition:</b> Zajecia.h:51</div></div>
+<div class="ttc" id="aObiekt_8h_html"><div class="ttname"><a href="Obiekt_8h.html">Obiekt.h</a></div><div class="ttdoc">Abstrakcyjna struktura przedstawiajaca obiekt bazodanowy.</div></div>
+<div class="ttc" id="aclassBaza_html"><div class="ttname"><a href="classBaza.html">Baza</a></div><div class="ttdoc">Klasa reprezentujaca interfejs polaczeniowy miedzy baza danych a aplikacja.</div><div class="ttdef"><b>Definition:</b> Baza.h:20</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

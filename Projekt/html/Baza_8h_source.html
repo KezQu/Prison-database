@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prison database: Plik źródłowy include/Baza.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Prison database
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Baza.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Baza_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;pqxx/pqxx&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classBaza.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBaza.html">Baza</a>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    pqxx::connection c;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    pqxx::result wynik_zapytania;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classBaza.html#a100310fc7de32c47e9830b2feacbb0b5">   38</a></span>&#160;    <a class="code" href="classBaza.html#a100310fc7de32c47e9830b2feacbb0b5">Baza</a>(std::string <span class="keyword">const</span>&amp; db_adres)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        :c{ db_adres }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    { std::cout &lt;&lt; <span class="stringliteral">&quot;Polaczono z &quot;</span> &lt;&lt; c.dbname() &lt;&lt; std::endl; }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ...Ts&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">auto</span> <a class="code" href="classBaza.html#a6b34cff393ec5d0856effb981881a183">query</a>(std::string query_str);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Ob, <span class="keyword">typename</span> ...Rt&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    std::vector&lt;Ob&gt; <a class="code" href="classBaza.html#a78f3d8b7d96d591370b7b08b3ed1f945">Zaladuj_dane</a>(std::string query_str);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Tuple&gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classBaza.html#a4f824e4c4bc6c68b775bd3b754f4049b">resetuj_formularz</a>(Tuple&amp; tpl);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Tuple, std::size_t ...i&gt;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> tmpl_for(std::vector&lt;pqxx::field&gt;&amp; field_vec, Tuple&amp; tpl, std::index_sequence&lt;i...&gt;);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Tuple, std::size_t ...i&gt;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> tmpl_for(Tuple&amp; tpl, std::index_sequence&lt;i...&gt;);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Typ&gt;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> reset(Typ&amp; pole, <span class="keyword">typename</span> std::enable_if&lt;std::is_arithmetic&lt;std::remove_reference_t&lt;Typ&gt;&gt;::value, <span class="keywordtype">bool</span>&gt;::type = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Typ&gt;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> reset(Typ&amp; pole, <span class="keyword">typename</span> std::enable_if&lt;std::is_class&lt;std::remove_reference_t&lt;Typ&gt;&gt;::value, <span class="keywordtype">bool</span>&gt;::type = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Typ, <span class="keywordtype">int</span> N&gt;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> reset(std::remove_all_extents_t&lt;std::remove_reference_t&lt;Typ&gt;&gt;(&amp;pole)[N]);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Tuple, std::<span class="keywordtype">size_t</span> i&gt;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span> konwertuj(std::vector&lt;pqxx::field&gt;&amp; field_vec, Tuple&amp; tpl, <span class="keyword">typename</span> std::enable_if&lt;std::is_arithmetic&lt;std::remove_reference_t&lt;decltype(std::get&lt;i&gt;(tpl))&gt;&gt;::value, <span class="keywordtype">bool</span>&gt;::type = <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keyword">auto</span> pole = field_vec[i];</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">if</span> (pole.is_null()) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            std::get&lt;i&gt;(tpl) = -1;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            std::get&lt;i&gt;(tpl) = pole.as&lt;std::remove_reference_t&lt;decltype(std::get&lt;i&gt;(tpl))&gt;&gt;();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Tuple, std::<span class="keywordtype">size_t</span> i&gt;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">void</span> konwertuj(std::vector&lt;pqxx::field&gt;&amp; field_vec, Tuple&amp; tpl, <span class="keyword">typename</span> std::enable_if&lt;std::is_class&lt;std::remove_reference_t&lt;decltype(std::get&lt;i&gt;(tpl))&gt;&gt;::value, <span class="keywordtype">bool</span>&gt;::type = <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keyword">auto</span> pole = field_vec[i];</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">if</span> (pole.is_null()) {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            std::get&lt;i&gt;(tpl) = <span class="stringliteral">&quot;brak&quot;</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            std::get&lt;i&gt;(tpl) = pole.as&lt;std::remove_reference_t&lt;decltype(std::get&lt;i&gt;(tpl))&gt;&gt;();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;};</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ...Ts&gt;</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classBaza.html#a6b34cff393ec5d0856effb981881a183">  151</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="classBaza.html#a6b34cff393ec5d0856effb981881a183">Baza::query</a>(std::string query_str) {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    pqxx::work w{ c };</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    w.query&lt;&gt;(<span class="stringliteral">&quot;set SEARCH_PATH to wiezienie;&quot;</span>);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">auto</span> zwrocone_zapytanie = w.query&lt;Ts...&gt;(query_str);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    w.commit();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">return</span> zwrocone_zapytanie;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="classBaza.html#a6b34cff393ec5d0856effb981881a183">Baza::query</a>(std::string query_str) {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    pqxx::work w{ c };</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    w.query&lt;&gt;(<span class="stringliteral">&quot;set SEARCH_PATH to wiezienie;&quot;</span>);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">auto</span> zwrocone_zapytanie = w.exec(query_str);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    w.commit();</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">return</span> zwrocone_zapytanie;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Ob, <span class="keyword">typename</span> ...Rt&gt;</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classBaza.html#a78f3d8b7d96d591370b7b08b3ed1f945">  167</a></span>&#160;<span class="keyword">inline</span> std::vector&lt;Ob&gt; <a class="code" href="classBaza.html#a78f3d8b7d96d591370b7b08b3ed1f945">Baza::Zaladuj_dane</a>(std::string query_str) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    std::vector&lt;Ob&gt; dane;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    wynik_zapytania = <a class="code" href="classBaza.html#a6b34cff393ec5d0856effb981881a183">query</a>(query_str);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    dane.clear();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; row : wynik_zapytania) {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        std::vector&lt;pqxx::field&gt; field_vec;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; field : row) {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            field_vec.push_back(field);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keyword">using</span> tuple_row = std::tuple&lt;Rt...&gt;;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        tuple_row rekord;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        tmpl_for &lt;tuple_row&gt;(field_vec, rekord, std::make_index_sequence&lt;std::tuple_size&lt;tuple_row&gt;::value&gt;{});</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        dane.emplace_back(rekord);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span> dane;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Tuple&gt;</div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="classBaza.html#a4f824e4c4bc6c68b775bd3b754f4049b">  184</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classBaza.html#a4f824e4c4bc6c68b775bd3b754f4049b">Baza::resetuj_formularz</a>(Tuple&amp; tpl) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    tmpl_for&lt;Tuple&gt;(tpl, std::make_index_sequence&lt;std::tuple_size&lt;Tuple&gt;::value&gt;{});</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Tuple, std::size_t ...i&gt;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> Baza::tmpl_for(std::vector&lt;pqxx::field&gt;&amp; field_vec, Tuple&amp; tpl, std::index_sequence&lt;i...&gt;) {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    (konwertuj&lt;Tuple, i&gt;(field_vec, tpl), ...);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Tuple, std::size_t ...i&gt;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> Baza::tmpl_for(Tuple&amp; tpl, std::index_sequence&lt;i...&gt;) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    (reset&lt;std::remove_const_t&lt;decltype(std::get&lt;i&gt;(tpl))&gt;&gt;(std::get&lt;i&gt;(tpl)), ...);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;}</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Typ&gt;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> Baza::reset(Typ&amp; pole, <span class="keyword">typename</span> std::enable_if&lt;std::is_arithmetic&lt;std::remove_reference_t&lt;Typ&gt;&gt;::value, <span class="keywordtype">bool</span>&gt;::type) {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    pole = 0;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Typ&gt;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> Baza::reset(Typ&amp; pole, <span class="keyword">typename</span> std::enable_if&lt;std::is_class&lt;std::remove_reference_t&lt;Typ&gt;&gt;::value, <span class="keywordtype">bool</span>&gt;::type) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    pole = {};</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;}</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Typ, <span class="keywordtype">int</span> N&gt;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> Baza::reset(std::remove_all_extents_t&lt;std::remove_reference_t&lt;Typ&gt;&gt;(&amp;pole)[N]) {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; N; i++) pole[i] = std::remove_all_extents_t&lt;std::remove_reference_t&lt;Typ&gt;&gt;(0);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassBaza_html_a78f3d8b7d96d591370b7b08b3ed1f945"><div class="ttname"><a href="classBaza.html#a78f3d8b7d96d591370b7b08b3ed1f945">Baza::Zaladuj_dane</a></div><div class="ttdeci">std::vector&lt; Ob &gt; Zaladuj_dane(std::string query_str)</div><div class="ttdoc">Metoda ladujaca dane z bazy do odpowiedniego wektora.</div><div class="ttdef"><b>Definition:</b> Baza.h:167</div></div>
+<div class="ttc" id="aclassBaza_html_a4f824e4c4bc6c68b775bd3b754f4049b"><div class="ttname"><a href="classBaza.html#a4f824e4c4bc6c68b775bd3b754f4049b">Baza::resetuj_formularz</a></div><div class="ttdeci">static void resetuj_formularz(Tuple &amp;tpl)</div><div class="ttdoc">Metoda pozwalajaca na zresetowanie danych wewnatrz foormularza.</div><div class="ttdef"><b>Definition:</b> Baza.h:184</div></div>
+<div class="ttc" id="aclassBaza_html_a6b34cff393ec5d0856effb981881a183"><div class="ttname"><a href="classBaza.html#a6b34cff393ec5d0856effb981881a183">Baza::query</a></div><div class="ttdeci">auto query(std::string query_str)</div><div class="ttdoc">Metoda pozwalajaca na wywolanie zapytania ktore zwraca okreslone dane.</div><div class="ttdef"><b>Definition:</b> Baza.h:151</div></div>
+<div class="ttc" id="aclassBaza_html_a100310fc7de32c47e9830b2feacbb0b5"><div class="ttname"><a href="classBaza.html#a100310fc7de32c47e9830b2feacbb0b5">Baza::Baza</a></div><div class="ttdeci">Baza(std::string const &amp;db_adres)</div><div class="ttdoc">Konstruktor tworzacy nowy interfejs.</div><div class="ttdef"><b>Definition:</b> Baza.h:38</div></div>
+<div class="ttc" id="aclassBaza_html"><div class="ttname"><a href="classBaza.html">Baza</a></div><div class="ttdoc">Klasa reprezentujaca interfejs polaczeniowy miedzy baza danych a aplikacja.</div><div class="ttdef"><b>Definition:</b> Baza.h:20</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Prison database: Plik źródłowy include/Osoba.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Prison database
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Osoba.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Osoba_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Obiekt_8h.html">Obiekt.h</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structOsoba.html">   19</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structOsoba.html">Osoba</a> : <span class="keyword">public</span> <a class="code" href="structObiekt.html">Obiekt</a>{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::string pesel;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::string imie;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::string nazwisko;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    std::string data_urodzenia;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structOsoba.html#a7bf365486a8e67ffce32265b2d116f82">   28</a></span>&#160;    <a class="code" href="structOsoba.html#a7bf365486a8e67ffce32265b2d116f82">Osoba</a>() : <a class="code" href="structOsoba.html">Osoba</a>{ 0, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span> } {}</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structOsoba.html#abb3d76225457883886f8ea536d6f2aa4">   37</a></span>&#160;    <a class="code" href="structOsoba.html#abb3d76225457883886f8ea536d6f2aa4">Osoba</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, std::string new_pesel, std::string new_imie, std::string new_nazwisko)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        :<a class="code" href="structObiekt.html">Obiekt</a>{ <span class="keywordtype">id</span> },</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        pesel{ new_pesel },</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        imie{ new_imie },</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        nazwisko{ new_nazwisko },</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        data_urodzenia{ <a class="code" href="structOsoba.html#aa5c16483c1cf2b6276f6002d0c046eda">Data_urodzenia</a>(new_pesel) }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {}</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structOsoba.html#aa1d4178828ddeb2deee9dd7ebb655264">   53</a></span>&#160;    <a class="code" href="structOsoba.html#aa1d4178828ddeb2deee9dd7ebb655264">Osoba</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, std::string new_pesel, std::string new_imie, std::string new_nazwisko, std::string new_data_urodzenia)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        :<a class="code" href="structObiekt.html">Obiekt</a>{ <span class="keywordtype">id</span> },</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        pesel{ <a class="code" href="structOsoba.html#a0271ef200042470e18185a9443092fdb">Czytalny_pesel</a>(new_pesel) },</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        imie{ new_imie },</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        nazwisko{ new_nazwisko },</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        data_urodzenia{ new_data_urodzenia }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {}</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="structOsoba.html#a4b6ee9e4e073550f64230134249cd1f8">   66</a></span>&#160;    <span class="keyword">static</span> std::string <a class="code" href="structOsoba.html#a4b6ee9e4e073550f64230134249cd1f8">Pesel_arr</a>(std::string pesel) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        std::string bufor = <span class="stringliteral">&quot;ARRAY[&quot;</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> l : pesel) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            bufor += l;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            bufor += <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        bufor.back() = <span class="charliteral">&#39;]&#39;</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> bufor;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="structOsoba.html#a0271ef200042470e18185a9443092fdb">   82</a></span>&#160;    std::string <a class="code" href="structOsoba.html#a0271ef200042470e18185a9443092fdb">Czytalny_pesel</a>(std::string pesel) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        std::string r_pesel;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; pesel.length(); i += 2) r_pesel += pesel[i];</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> r_pesel;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="structOsoba.html#aa5c16483c1cf2b6276f6002d0c046eda">   93</a></span>&#160;    std::string <a class="code" href="structOsoba.html#aa5c16483c1cf2b6276f6002d0c046eda">Data_urodzenia</a>(std::string pesel) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">if</span> (pesel.empty())</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        std::string data_urodzenia;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">switch</span> (pesel[2])</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;8&#39;</span>:   data_urodzenia += <span class="stringliteral">&quot;18&quot;</span>; <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;9&#39;</span>:   data_urodzenia += <span class="stringliteral">&quot;18&quot;</span>; <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;0&#39;</span>:   data_urodzenia += <span class="stringliteral">&quot;19&quot;</span>; <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;1&#39;</span>:   data_urodzenia += <span class="stringliteral">&quot;19&quot;</span>; <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;2&#39;</span>:   data_urodzenia += <span class="stringliteral">&quot;20&quot;</span>; <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;3&#39;</span>:   data_urodzenia += <span class="stringliteral">&quot;20&quot;</span>; <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        data_urodzenia += pesel[0];</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        data_urodzenia += pesel[1];</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        data_urodzenia += <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keyword">auto</span> spr_miesiac = pesel[2];</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">if</span> (atoi(&amp;spr_miesiac) % 2)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            data_urodzenia += <span class="stringliteral">&quot;1&quot;</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">else</span> </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            data_urodzenia += <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        data_urodzenia += pesel[3];</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        data_urodzenia += <span class="stringliteral">&quot;-&quot;</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        data_urodzenia += pesel[4];</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        data_urodzenia += pesel[5];</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">return</span> data_urodzenia;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructOsoba_html_a7bf365486a8e67ffce32265b2d116f82"><div class="ttname"><a href="structOsoba.html#a7bf365486a8e67ffce32265b2d116f82">Osoba::Osoba</a></div><div class="ttdeci">Osoba()</div><div class="ttdoc">Domyslny konstruktor pozwalajacy na stworzenie obiektu osoba bez zadnych danych.</div><div class="ttdef"><b>Definition:</b> Osoba.h:28</div></div>
+<div class="ttc" id="astructOsoba_html_a4b6ee9e4e073550f64230134249cd1f8"><div class="ttname"><a href="structOsoba.html#a4b6ee9e4e073550f64230134249cd1f8">Osoba::Pesel_arr</a></div><div class="ttdeci">static std::string Pesel_arr(std::string pesel)</div><div class="ttdoc">Metoda pozwalajaca na przeksztalcenie numeru pesel na format odpowiedni dla bazy danych.</div><div class="ttdef"><b>Definition:</b> Osoba.h:66</div></div>
+<div class="ttc" id="astructObiekt_html"><div class="ttname"><a href="structObiekt.html">Obiekt</a></div><div class="ttdoc">Struktura przedstawiajaca najbardizej podstawowy obiekt bazy danych.</div><div class="ttdef"><b>Definition:</b> Obiekt.h:17</div></div>
+<div class="ttc" id="astructOsoba_html_aa1d4178828ddeb2deee9dd7ebb655264"><div class="ttname"><a href="structOsoba.html#aa1d4178828ddeb2deee9dd7ebb655264">Osoba::Osoba</a></div><div class="ttdeci">Osoba(int id, std::string new_pesel, std::string new_imie, std::string new_nazwisko, std::string new_data_urodzenia)</div><div class="ttdoc">Konstruktor pozwalajacy na stworzenie obosy o zadanych wlasnosciach wraz z podana data urodzenia.</div><div class="ttdef"><b>Definition:</b> Osoba.h:53</div></div>
+<div class="ttc" id="astructOsoba_html_aa5c16483c1cf2b6276f6002d0c046eda"><div class="ttname"><a href="structOsoba.html#aa5c16483c1cf2b6276f6002d0c046eda">Osoba::Data_urodzenia</a></div><div class="ttdeci">std::string Data_urodzenia(std::string pesel)</div><div class="ttdoc">Metoda pozwalajaca wyciagniecie daty urodzenia z poprawnego numeru pesel.</div><div class="ttdef"><b>Definition:</b> Osoba.h:93</div></div>
+<div class="ttc" id="astructOsoba_html_abb3d76225457883886f8ea536d6f2aa4"><div class="ttname"><a href="structOsoba.html#abb3d76225457883886f8ea536d6f2aa4">Osoba::Osoba</a></div><div class="ttdeci">Osoba(int id, std::string new_pesel, std::string new_imie, std::string new_nazwisko)</div><div class="ttdoc">Konstruktor pozwalajacy na stworzenie obosy o zadanych wlasnosciach, gdzie data urodzenia jest wyciag...</div><div class="ttdef"><b>Definition:</b> Osoba.h:37</div></div>
+<div class="ttc" id="astructOsoba_html_a0271ef200042470e18185a9443092fdb"><div class="ttname"><a href="structOsoba.html#a0271ef200042470e18185a9443092fdb">Osoba::Czytalny_pesel</a></div><div class="ttdeci">std::string Czytalny_pesel(std::string pesel)</div><div class="ttdoc">Metoda przeksztalcajaca numer pesel z formatu bazodanowego na format czytelny.</div><div class="ttdef"><b>Definition:</b> Osoba.h:82</div></div>
+<div class="ttc" id="aObiekt_8h_html"><div class="ttname"><a href="Obiekt_8h.html">Obiekt.h</a></div><div class="ttdoc">Abstrakcyjna struktura przedstawiajaca obiekt bazodanowy.</div></div>
+<div class="ttc" id="astructOsoba_html"><div class="ttname"><a href="structOsoba.html">Osoba</a></div><div class="ttdoc">Klasa reprezentujaca osobe.</div><div class="ttdef"><b>Definition:</b> Osoba.h:19</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

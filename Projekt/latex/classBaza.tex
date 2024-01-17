@@ -1,0 +1,130 @@
+\hypertarget{classBaza}{}\doxysection{Dokumentacja klasy Baza}
+\label{classBaza}\index{Baza@{Baza}}
+
+
+Klasa reprezentujaca interfejs polaczeniowy miedzy baza danych a aplikacja.  
+
+
+
+
+{\ttfamily \#include $<$Baza.\+h$>$}
+
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaza_a100310fc7de32c47e9830b2feacbb0b5}{Baza}} (std\+::string const \&db\+\_\+adres)
+\begin{DoxyCompactList}\small\item\em Konstruktor tworzacy nowy interfejs. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... Ts$>$ }\\auto \mbox{\hyperlink{classBaza_a6b34cff393ec5d0856effb981881a183}{query}} (std\+::string query\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Metoda pozwalajaca na wywolanie zapytania ktore zwraca okreslone dane. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Ob , typename ... Rt$>$ }\\std\+::vector$<$ Ob $>$ \mbox{\hyperlink{classBaza_a78f3d8b7d96d591370b7b08b3ed1f945}{Zaladuj\+\_\+dane}} (std\+::string query\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Metoda ladujaca dane z bazy do odpowiedniego wektora. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBaza_abc5bff08e5d99271b4edfc8754b9664c}\label{classBaza_abc5bff08e5d99271b4edfc8754b9664c}} 
+template$<$$>$ auto {\bfseries query} (std\+::string query\+\_\+str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Tuple $>$ }\\static void \mbox{\hyperlink{classBaza_a4f824e4c4bc6c68b775bd3b754f4049b}{resetuj\+\_\+formularz}} (Tuple \&tpl)
+\begin{DoxyCompactList}\small\item\em Metoda pozwalajaca na zresetowanie danych wewnatrz foormularza. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa reprezentujaca interfejs polaczeniowy miedzy baza danych a aplikacja. 
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{classBaza_a100310fc7de32c47e9830b2feacbb0b5}\label{classBaza_a100310fc7de32c47e9830b2feacbb0b5}} 
+\index{Baza@{Baza}!Baza@{Baza}}
+\index{Baza@{Baza}!Baza@{Baza}}
+\doxysubsubsection{\texorpdfstring{Baza()}{Baza()}}
+{\footnotesize\ttfamily Baza\+::\+Baza (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{db\+\_\+adres }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor tworzacy nowy interfejs. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em db\+\_\+adres} & zmienne potrzebne do poprawnego polaczenia z baza danych \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{classBaza_a6b34cff393ec5d0856effb981881a183}\label{classBaza_a6b34cff393ec5d0856effb981881a183}} 
+\index{Baza@{Baza}!query@{query}}
+\index{query@{query}!Baza@{Baza}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}}
+{\footnotesize\ttfamily template$<$typename ... Ts$>$ \\
+auto Baza\+::query (\begin{DoxyParamCaption}\item[{std\+::string}]{query\+\_\+str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda pozwalajaca na wywolanie zapytania ktore zwraca okreslone dane. 
+
+
+\begin{DoxyTemplParams}{Parametry Szablonu}
+{\em Ts} & typy zwracanych danych \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametry}
+{\em query\+\_\+str} & zapytanie do bazy danych \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+auto iterator zawierajacy zwrocone dane 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBaza_a4f824e4c4bc6c68b775bd3b754f4049b}\label{classBaza_a4f824e4c4bc6c68b775bd3b754f4049b}} 
+\index{Baza@{Baza}!resetuj\_formularz@{resetuj\_formularz}}
+\index{resetuj\_formularz@{resetuj\_formularz}!Baza@{Baza}}
+\doxysubsubsection{\texorpdfstring{resetuj\_formularz()}{resetuj\_formularz()}}
+{\footnotesize\ttfamily template$<$typename Tuple $>$ \\
+void Baza\+::resetuj\+\_\+formularz (\begin{DoxyParamCaption}\item[{Tuple \&}]{tpl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Metoda pozwalajaca na zresetowanie danych wewnatrz foormularza. 
+
+
+\begin{DoxyTemplParams}{Parametry Szablonu}
+{\em Tuple} & krotka reprezentujaca formularz \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametry}
+{\em tpl} & formularz \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBaza_a78f3d8b7d96d591370b7b08b3ed1f945}\label{classBaza_a78f3d8b7d96d591370b7b08b3ed1f945}} 
+\index{Baza@{Baza}!Zaladuj\_dane@{Zaladuj\_dane}}
+\index{Zaladuj\_dane@{Zaladuj\_dane}!Baza@{Baza}}
+\doxysubsubsection{\texorpdfstring{Zaladuj\_dane()}{Zaladuj\_dane()}}
+{\footnotesize\ttfamily template$<$typename Ob , typename ... Rt$>$ \\
+std\+::vector$<$ Ob $>$ Baza\+::\+Zaladuj\+\_\+dane (\begin{DoxyParamCaption}\item[{std\+::string}]{query\+\_\+str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda ladujaca dane z bazy do odpowiedniego wektora. 
+
+
+\begin{DoxyTemplParams}{Parametry Szablonu}
+{\em Ob} & obiekt do ktorego dane zwrocone sa ladowane \\
+\hline
+{\em Rt} & typy danych zwracane przez baze \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametry}
+{\em query\+\_\+str} & zapytanie do bazy danych \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+std\+::vector$<$\+Ob$>$ wektor obiektow stworzonych na podstawie danych z bazy 
+\end{DoxyReturn}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Baza_8h}{Baza.\+h}}\end{DoxyCompactItemize}

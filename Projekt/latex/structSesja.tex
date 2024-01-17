@@ -1,0 +1,144 @@
+\hypertarget{structSesja}{}\doxysection{Dokumentacja struktury Sesja}
+\label{structSesja}\index{Sesja@{Sesja}}
+
+
+Struktura zawierajaca informacje o zalogowanym uzytkowniku.  
+
+
+
+
+{\ttfamily \#include $<$Sesja.\+h$>$}
+
+\doxysubsection*{Typy publiczne}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structSesja_a153c6d67d12384f8138200798d75ae85}{Status}} \{ \newline
+{\bfseries N\+I\+E\+Z\+A\+L\+O\+G\+O\+W\+A\+NY} = 0, 
+{\bfseries W\+I\+Z\+Y\+T\+A\+T\+OR} = 1, 
+{\bfseries S\+T\+R\+A\+Z\+N\+IK} = 2, 
+{\bfseries I\+N\+S\+T\+R\+U\+K\+T\+OR} = 3, 
+\newline
+{\bfseries N\+A\+C\+Z\+E\+L\+N\+IK} = 4, 
+{\bfseries S\+K\+A\+Z\+A\+NY} = 5
+ \}
+\begin{DoxyCompactList}\small\item\em Typ wyliczeniowy definiujacy sposob dostepu do bazy danych. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structSesja_af76debfb0a24bc2d9516c61b4cb11ddb}{Sesja}} ()
+\begin{DoxyCompactList}\small\item\em Domyslny konstruktor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSesja_ade6ee84d390bf8a9168b76e6397d8cfe}{Sesja}} (\mbox{\hyperlink{structPracownik}{Pracownik}} p)
+\begin{DoxyCompactList}\small\item\em Konstruktor tworzacy sesje na podstawie danych pracownika. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSesja_ae5db39d0713785f49a4addead51709d4}{Sesja}} (\mbox{\hyperlink{structSkazany}{Skazany}} s)
+\begin{DoxyCompactList}\small\item\em Konstruktor pozwalajacy na stworzenie sesji na podstawie zalogowanego skazanego. \end{DoxyCompactList}\item 
+std\+::tuple$<$ std\+::string, std\+::string, std\+::string, std\+::string, std\+::string $>$ \mbox{\hyperlink{structSesja_ad6220962aa3e824e19126f85a7240fa2}{Dane}} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwracajaca dane przechowywane w sesji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structSesja_afc071641ef2781f11efb032719abc221}\label{structSesja_afc071641ef2781f11efb032719abc221}} 
+\mbox{\hyperlink{structSesja_a153c6d67d12384f8138200798d75ae85}{Status}} {\bfseries status}
+\item 
+\mbox{\Hypertarget{structSesja_aeec7b8f5873f9f11238063d36eed9672}\label{structSesja_aeec7b8f5873f9f11238063d36eed9672}} 
+std\+::string {\bfseries id} \{\}
+\item 
+\mbox{\Hypertarget{structSesja_a7dfe7b8db0c12f32749e2cbb3c3e411c}\label{structSesja_a7dfe7b8db0c12f32749e2cbb3c3e411c}} 
+std\+::string {\bfseries imie} \{\}
+\item 
+\mbox{\Hypertarget{structSesja_a7ced2d43e82ea07f7184ddd600e0a032}\label{structSesja_a7ced2d43e82ea07f7184ddd600e0a032}} 
+std\+::string {\bfseries nazwisko} \{\}
+\item 
+\mbox{\Hypertarget{structSesja_a259db9999ed21bf373e480182c1bb73e}\label{structSesja_a259db9999ed21bf373e480182c1bb73e}} 
+std\+::string {\bfseries pesel} \{\}
+\item 
+\mbox{\Hypertarget{structSesja_addf9334cbde9ac3ab1551212cc9501a8}\label{structSesja_addf9334cbde9ac3ab1551212cc9501a8}} 
+std\+::string {\bfseries data\+\_\+urodzenia} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structSesja_a553f958a25683445088050a69d3de8e9}\label{structSesja_a553f958a25683445088050a69d3de8e9}} 
+class {\bfseries Window}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Struktura zawierajaca informacje o zalogowanym uzytkowniku. 
+
+
+
+\doxysubsection{Dokumentacja składowych wyliczanych}
+\mbox{\Hypertarget{structSesja_a153c6d67d12384f8138200798d75ae85}\label{structSesja_a153c6d67d12384f8138200798d75ae85}} 
+\index{Sesja@{Sesja}!Status@{Status}}
+\index{Status@{Status}!Sesja@{Sesja}}
+\doxysubsubsection{\texorpdfstring{Status}{Status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structSesja_a153c6d67d12384f8138200798d75ae85}{Sesja\+::\+Status}}}
+
+
+
+Typ wyliczeniowy definiujacy sposob dostepu do bazy danych. 
+
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{structSesja_af76debfb0a24bc2d9516c61b4cb11ddb}\label{structSesja_af76debfb0a24bc2d9516c61b4cb11ddb}} 
+\index{Sesja@{Sesja}!Sesja@{Sesja}}
+\index{Sesja@{Sesja}!Sesja@{Sesja}}
+\doxysubsubsection{\texorpdfstring{Sesja()}{Sesja()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Sesja\+::\+Sesja (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Domyslny konstruktor. 
+
+\mbox{\Hypertarget{structSesja_ade6ee84d390bf8a9168b76e6397d8cfe}\label{structSesja_ade6ee84d390bf8a9168b76e6397d8cfe}} 
+\index{Sesja@{Sesja}!Sesja@{Sesja}}
+\index{Sesja@{Sesja}!Sesja@{Sesja}}
+\doxysubsubsection{\texorpdfstring{Sesja()}{Sesja()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Sesja\+::\+Sesja (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPracownik}{Pracownik}}}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor tworzacy sesje na podstawie danych pracownika. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em p} & pracownik logujacy sie do aplikacji \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structSesja_ae5db39d0713785f49a4addead51709d4}\label{structSesja_ae5db39d0713785f49a4addead51709d4}} 
+\index{Sesja@{Sesja}!Sesja@{Sesja}}
+\index{Sesja@{Sesja}!Sesja@{Sesja}}
+\doxysubsubsection{\texorpdfstring{Sesja()}{Sesja()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Sesja\+::\+Sesja (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSkazany}{Skazany}}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor pozwalajacy na stworzenie sesji na podstawie zalogowanego skazanego. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em s} & logujacy sie skazany \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{structSesja_ad6220962aa3e824e19126f85a7240fa2}\label{structSesja_ad6220962aa3e824e19126f85a7240fa2}} 
+\index{Sesja@{Sesja}!Dane@{Dane}}
+\index{Dane@{Dane}!Sesja@{Sesja}}
+\doxysubsubsection{\texorpdfstring{Dane()}{Dane()}}
+{\footnotesize\ttfamily std\+::tuple$<$std\+::string, std\+::string, std\+::string, std\+::string, std\+::string$>$ Sesja\+::\+Dane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda zwracajaca dane przechowywane w sesji. 
+
+\begin{DoxyReturn}{Zwraca}
+std\+::tuple$<$std\+::string, std\+::string, std\+::string, std\+::string, std\+::string$>$ 
+\end{DoxyReturn}
+
+
+Dokumentacja dla tej struktury została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Sesja_8h}{Sesja.\+h}}\end{DoxyCompactItemize}

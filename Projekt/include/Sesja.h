@@ -1,10 +1,28 @@
+/**
+ * @file Sesja.h
+ * @author Jakub Mikusek
+ * @brief Plik zawierajacy strukture reprezentujaca sesje
+ * @version 0.1
+ * @date 2024-01-17
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #pragma once
 #include "Pracownik.h"
 #include "Skazany.h"
 
+/**
+ * @brief Struktura zawierajaca informacje o zalogowanym uzytkowniku
+ * 
+ */
 struct Sesja {
 	friend class Window;
 public:
+	/**
+	 * @brief Typ wyliczeniowy definiujacy sposob dostepu do bazy danych
+	 * 
+	 */
 	enum Status{
 		NIEZALOGOWANY = 0,
 		WIZYTATOR = 1,
@@ -13,7 +31,16 @@ public:
 		NACZELNIK = 4,
 		SKAZANY = 5
 	};
+	/**
+	 * @brief Domyslny konstruktor 
+	 * 
+	 */
 	Sesja() :status{ NIEZALOGOWANY } {}
+	/**
+	 * @brief Konstruktor tworzacy sesje na podstawie danych pracownika
+	 * 
+	 * @param p pracownik logujacy sie do aplikacji
+	 */
 	Sesja(Pracownik p)
 		:id{ std::to_string(p.id) },
 		haslo{ p.haslo },
@@ -29,6 +56,11 @@ public:
 		else if (p.stanowisko == "Instruktor")
 			status = INSTRUKTOR;
 	}
+	/**
+	 * @brief Konstruktor pozwalajacy na stworzenie sesji na podstawie zalogowanego skazanego
+	 * 
+	 * @param s logujacy sie skazany
+	 */
 	Sesja(Skazany s)
 		:status{ SKAZANY },
 		id{ std::to_string(s.id) },
@@ -38,6 +70,11 @@ public:
 		pesel{ s.pesel },
 		data_urodzenia{ s.data_urodzenia }
 	{}
+	/**
+	 * @brief Metoda zwracajaca dane przechowywane w sesji 
+	 * 
+	 * @return std::tuple<std::string, std::string, std::string, std::string, std::string> 
+	 */
 	std::tuple<std::string, std::string, std::string, std::string, std::string> Dane() {
 		return std::make_tuple(id, imie, nazwisko, pesel, data_urodzenia);
 	}
