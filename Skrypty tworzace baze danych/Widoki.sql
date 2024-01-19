@@ -81,6 +81,6 @@ create view statystyka_praca
 as select w.nazwa_wiezienia, p.nazwa_pracy, p.wymiar_godzin, count(s.id_skazany)
 from praca p
 join wiezienie w on w.id_wiezienie = p.id_wiezienie
-join praca_skazany ps on ps.id_praca = p.id_praca
-join skazany s on s.id_skazany = ps.id_skazany
+left join praca_skazany ps on ps.id_praca = p.id_praca
+left join skazany s on s.id_skazany = ps.id_skazany
 group by w.nazwa_wiezienia, p.nazwa_pracy, p.wymiar_godzin order by 1;
