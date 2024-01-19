@@ -368,7 +368,7 @@ void Window::Dodawanie(Baza& baza)
 				baza.query("INSERT INTO praca VALUES (" +
 					std::to_string(std::get<0>(praca_rekord)) +
 					", " + (std::get<1>(praca_rekord).length() == 0 ? "NULL" : "'" + std::get<1>(praca_rekord) + "'") +
-					", " + (std::get<2>(praca_rekord) == 0 ? "NULL" : std::to_string(std::get<2>(praca_rekord))) +
+					", " + (std::get<2>(praca_rekord) <= 0 ? "NULL" : std::to_string(std::get<2>(praca_rekord))) +
 					", " + std::to_string(std::get<3>(praca_rekord)) + ");");
 			}
 			catch (std::exception& e) {
