@@ -73,7 +73,7 @@ group by w.nazwa_wiezienia order by 1;
 create view zajecia_zapisani_skazani
 as select zr.nazwa_zajec, zr.id_zajecia, gz.id_grupa, gz.zajecia_od, gz.zajecia_do, sg.id_skazany
 from zajecia_resocjalizacyjne zr  
-join grupa_zajeciowa gz on gz.id_grupa = zr.id_zajecia
+join grupa_zajeciowa gz on gz.id_zajecia = zr.id_zajecia
 join skazany_grupa sg on sg.id_grupa = gz.id_grupa order by 1;
 
 --drop view statystyka_praca;
