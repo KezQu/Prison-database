@@ -36,6 +36,7 @@
 
 # Binary dump
 out
+linux
 
 # Login to database info
 db_login.txt
