@@ -1,2 +1,0 @@
-# Hashes of file build rules.
-2c7f1a60819593be3f50b3754c6e3027 Projekt/Dependencies/glfw/src/CMakeFiles/update_mappings
