@@ -55,7 +55,7 @@ from wiezienie w
 join pracownik p on p.id_wiezienie = w.id_wiezienie 
 left join zajecia_resocjalizacyjne zr on zr.id_pracownik = p.id_pracownik 
 left join grupa_zajeciowa gz on gz.id_zajecia = zr.id_zajecia
-left join skazany_grupa sg on sg.id_grupa = sg.id_grupa where p.stanowisko = 'Instruktor'
+left join skazany_grupa sg on gz.id_grupa = sg.id_grupa where p.stanowisko = 'Instruktor'
 group by w.nazwa_wiezienia, zr.nazwa_zajec order by 1;
 
 create view statystyka_wiezienia
