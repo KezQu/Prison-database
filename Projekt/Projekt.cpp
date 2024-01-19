@@ -20,13 +20,9 @@ int main()
 		while (window.Loop()) {
 			window.Refresh();
 		
-			if (window.GetStatus() == Sesja::NIEZALOGOWANY)
-				window.Logowanie(baza);
-			else {
-				window.Wyszukiwanie(baza);
-				window.Dodawanie(baza);
-				window.Dane();
-			}
+			window.GetStatus() == Sesja::NIEZALOGOWANY ? window.Logowanie(baza) : window.Dane();
+			window.Wyszukiwanie(baza);
+			window.Dodawanie(baza);
 			window.Render();
 		}
 	}

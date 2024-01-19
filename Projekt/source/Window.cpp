@@ -144,8 +144,6 @@ void Window::Logowanie(Baza& baza)
 
 void Window::Dodawanie(Baza& baza)
 {
-	ImGui::SetNextWindowPos(vp->WorkPos);
-	ImGui::SetNextWindowSize({ 350, 0.7f * _winSize.second });
 	static std::string opcja{"##zapelnijDodawanie"};
 	static auto zapelnij = [&]() {};
 	static auto d_zajecia = [&]() {
@@ -558,6 +556,7 @@ void Window::Dodawanie(Baza& baza)
 				}
 			}
 		}
+		ImGui::Separator();
 		if (log != "ok") {
 			ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1, 0, 0, 1));
 			ImGui::Text(log.c_str());
@@ -568,7 +567,6 @@ void Window::Dodawanie(Baza& baza)
 			ImGui::Text("Pomyslnie zapisno do pracy");
 			ImGui::PopStyleColor(1);
 		}
-		ImGui::Separator();
 		};
 	static auto z_na_wizyte = [&]() {
 		opcja = "Zapisz sie na wizyte";
@@ -679,11 +677,11 @@ void Window::Dodawanie(Baza& baza)
 		}
 	};
 	static std::function<void()> okno_kontekstowe{ zapelnij };
-	ImGui::Begin(opcja.c_str(), &close, _winFlags);
-	switch (zu.status) {
-	case Sesja::NIEZALOGOWANY:
-		okno_kontekstowe = zapelnij;
-		break;
+	if (zu.status != Sesja::NIEZALOGOWANY) {
+		ImGui::SetNextWindowPos(vp->WorkPos);
+		ImGui::SetNextWindowSize({ 350, 0.7f * _winSize.second });
+		ImGui::Begin(opcja.c_str(), &close, _winFlags);
+		switch (zu.status) {
 	case Sesja::WIZYTATOR:
 		okno_kontekstowe = z_na_wizyte;
 		break;
@@ -727,14 +725,17 @@ void Window::Dodawanie(Baza& baza)
 	default:
 		break;
 	}
-	okno_kontekstowe();
-	ImGui::End();
+		okno_kontekstowe();
+		ImGui::End();
+	}
+	else {
+		okno_kontekstowe = zapelnij;
+		opcja = "##zapelnijDodawanie";
+	}
 }
 
 void Window::Wyszukiwanie(Baza& baza)
 {
-	ImGui::SetNextWindowPos({ vp->WorkPos.x + 350, vp->WorkPos.y });
-	ImGui::SetNextWindowSize({ (float)_winSize.first - 350, (float)_winSize.second });
 	static int wybrany = -1;
 	static std::string opcja{"##zapelnijWyszukanie"};
 	static auto zapelnij = [&]() {};
@@ -973,31 +974,35 @@ void Window::Wyszukiwanie(Baza& baza)
 		opcja = "Raport";
 		static auto spacing = [&](std::string const& str) {return ImGui::GetFontSize() * str.length() / 2.f; };
 		using Statystyka_all = std::tuple<std::string, int, int, int>;
+		using Statystyka_praca = std::tuple<std::string, std::string, int, int>;
+		using Statystyka_blok = std::tuple<std::string, std::string, int, int>;
+		using Statystyka_zajecia = std::tuple<std::string, std::string, int, int>;
+
 		static auto statystyka_all = baza.Zaladuj_dane<Statystyka_all, std::string, int, int, int>("SELECT * FROM statystyka_wiezienia sw WHERE sw.nazwa_wiezienia = (SELECT w.nazwa_wiezienia FROM wiezienie w WHERE w.id_wiezienie = (SELECT id_wiezienie from pracownik WHERE id_pracownik = " + zu.id +"));");
+		static auto statystyka_blok = baza.Zaladuj_dane<Statystyka_blok, std::string, std::string, int, int>("SELECT * FROM statystyka_blokow sw WHERE sw.nazwa_wiezienia = (SELECT w.nazwa_wiezienia FROM wiezienie w WHERE w.id_wiezienie = (SELECT id_wiezienie from pracownik WHERE id_pracownik = " + zu.id + "));");
+		static auto statystyka_zajecia = baza.Zaladuj_dane<Statystyka_zajecia, std::string, std::string, int, int>("SELECT * FROM statystyka_zajec sz WHERE sz.nazwa_wiezienia = (SELECT w.nazwa_wiezienia FROM wiezienie w WHERE w.id_wiezienie = (SELECT id_wiezienie from pracownik WHERE id_pracownik = " + zu.id + "));");
+		static auto statystyka_praca = baza.Zaladuj_dane<Statystyka_praca, std::string, std::string, int, int>("SELECT * FROM statystyka_praca sp WHERE sp.nazwa_wiezienia = (SELECT w.nazwa_wiezienia FROM wiezienie w WHERE w.id_wiezienie = (SELECT id_wiezienie from pracownik WHERE id_pracownik = " + zu.id + "));");
+		if (zaktualizuj_dane) {
+			statystyka_all = baza.Zaladuj_dane<Statystyka_all, std::string, int, int, int>("SELECT * FROM statystyka_wiezienia sw WHERE sw.nazwa_wiezienia = (SELECT w.nazwa_wiezienia FROM wiezienie w WHERE w.id_wiezienie = (SELECT id_wiezienie from pracownik WHERE id_pracownik = " + zu.id + "));");
+			statystyka_blok = baza.Zaladuj_dane<Statystyka_blok, std::string, std::string, int, int>("SELECT * FROM statystyka_blokow sw WHERE sw.nazwa_wiezienia = (SELECT w.nazwa_wiezienia FROM wiezienie w WHERE w.id_wiezienie = (SELECT id_wiezienie from pracownik WHERE id_pracownik = " + zu.id + "));");
+			statystyka_zajecia = baza.Zaladuj_dane<Statystyka_zajecia, std::string, std::string, int, int>("SELECT * FROM statystyka_zajec sz WHERE sz.nazwa_wiezienia = (SELECT w.nazwa_wiezienia FROM wiezienie w WHERE w.id_wiezienie = (SELECT id_wiezienie from pracownik WHERE id_pracownik = " + zu.id + "));");
+			statystyka_praca = baza.Zaladuj_dane<Statystyka_praca, std::string, std::string, int, int>("SELECT * FROM statystyka_praca sp WHERE sp.nazwa_wiezienia = (SELECT w.nazwa_wiezienia FROM wiezienie w WHERE w.id_wiezienie = (SELECT id_wiezienie from pracownik WHERE id_pracownik = " + zu.id + "));");
+		}
 		auto w = ImGui::GetWindowWidth();
 		ImGui::Spacing();
 		ImGui::SameLine(w / 2.f - spacing(std::get<0>(statystyka_all.front())));
 		ImGui::Text(std::get<0>(statystyka_all.front()).c_str());
 		StworzTabela("Statystyka_all", { "Ilosc pracownikow", "Ilosc wizytatorow", "Ilosc skazanych" }, statystyka_all);
-
-		using Statystyka_blok = std::tuple<std::string, std::string, int, int>;
-		static auto statystyka_blok = baza.Zaladuj_dane<Statystyka_blok, std::string, std::string, int, int>("SELECT * FROM statystyka_blokow sw WHERE sw.nazwa_wiezienia = (SELECT w.nazwa_wiezienia FROM wiezienie w WHERE w.id_wiezienie = (SELECT id_wiezienie from pracownik WHERE id_pracownik = " + zu.id + "));");
 		StworzTabela("Statystyka_blok", { "Nazwa bloku", "Ilosc straznikow", "Ilosc skazanych" }, statystyka_blok);
-
-		using Statystyka_zajecia = std::tuple<std::string, std::string, int, int>;
-		static auto statystyka_zajecia = baza.Zaladuj_dane<Statystyka_zajecia, std::string, std::string, int, int>("SELECT * FROM statystyka_zajec sz WHERE sz.nazwa_wiezienia = (SELECT w.nazwa_wiezienia FROM wiezienie w WHERE w.id_wiezienie = (SELECT id_wiezienie from pracownik WHERE id_pracownik = " + zu.id + "));");
 		StworzTabela("Statystyka_zajecia", { "Nazwa zajec", "Ilosc instruktorow", "Ilosc skazanych" }, statystyka_zajecia);
-		
-		using Statystyka_praca = std::tuple<std::string, std::string, int, int>;
-		static auto statystyka_praca = baza.Zaladuj_dane<Statystyka_praca, std::string, std::string, int, int>("SELECT * FROM statystyka_praca sp WHERE sp.nazwa_wiezienia = (SELECT w.nazwa_wiezienia FROM wiezienie w WHERE w.id_wiezienie = (SELECT id_wiezienie from pracownik WHERE id_pracownik = " + zu.id + "));");
 		StworzTabela("Statystyka_praca", { "Nazwa pracy", "Ilosc godzin w tygodniu", "Ilosc skazanych" }, statystyka_praca);
 		};
 	static std::function<void()> okno_kontekstowe{ zapelnij };
-	ImGui::Begin(opcja.c_str(), &close, _winFlags - ImGuiWindowFlags_AlwaysAutoResize);
-	switch (zu.status) {
-	case Sesja::NIEZALOGOWANY:
-		okno_kontekstowe = zapelnij;
-		break;
+	if (zu.status != Sesja::NIEZALOGOWANY) {
+		ImGui::SetNextWindowPos({ vp->WorkPos.x + 350, vp->WorkPos.y });
+		ImGui::SetNextWindowSize({ (float)_winSize.first - 350, (float)_winSize.second });
+		ImGui::Begin(opcja.c_str(), &close, _winFlags - ImGuiWindowFlags_AlwaysAutoResize);
+		switch (zu.status) {
 	case Sesja::WIZYTATOR:
 		okno_kontekstowe = s_skazany;
 		break;
@@ -1037,12 +1042,18 @@ void Window::Wyszukiwanie(Baza& baza)
 		}
 		break;
 	case Sesja::SKAZANY:
+		okno_kontekstowe = s_zajec;
 		break;
 	default:
 		break;
 	}
-	okno_kontekstowe();
-	ImGui::End();
+		okno_kontekstowe();
+		ImGui::End();
+	}
+	else {
+		okno_kontekstowe = zapelnij;
+		opcja = "##zapelnijWyszukanie";
+	}
 	zaktualizuj_dane = false;
 }
 

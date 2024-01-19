@@ -1,0 +1,826 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/cryptohash.h
+
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/sha2.h
+
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/include/getaddrinfo.h
+sys/socket.h
+-
+netdb.h
+-
+
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/include/libpq-events.h
+libpq-fe.h
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/include/libpq-fe.h
+
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/include/libpq-fe.h
+stdio.h
+-
+postgres_ext.h
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/include/postgres_ext.h
+
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/include/pg_config_ext.h
+
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/include/pg_config_manual.h
+
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/include/pg_config_os.h
+
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/include/pg_config_paths.h
+
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/include/postgres_ext.h
+pg_config_ext.h
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/include/pg_config_ext.h
+
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq/pqcomm.h
+sys/socket.h
+-
+netdb.h
+-
+sys/un.h
+-
+netinet/in.h
+-
+
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/mb/pg_wchar.h
+
+../Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pg_config_linux_x64.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/base64.c
+postgres.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres.h
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+common/base64.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/base64.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/c.h
+postgres_ext.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_ext.h
+pg_config.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pg_config.h
+pg_config_manual.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pg_config_manual.h
+pg_config_os.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pg_config_os.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+stddef.h
+-
+stdarg.h
+-
+strings.h
+-
+stdint.h
+-
+sys/types.h
+-
+errno.h
+-
+fcntl.h
+-
+locale.h
+-
+libintl.h
+-
+stdbool.h
+-
+assert.h
+-
+port.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/port.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/chklocale.c
+postgres.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres.h
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+langinfo.h
+-
+mb/pg_wchar.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/mb/pg_wchar.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/base64.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/cryptohash.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/fe_memutils.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/hmac.h
+common/cryptohash.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/common/cryptohash.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/ip.h
+getaddrinfo.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/getaddrinfo.h
+libpq/pqcomm.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/libpq/pqcomm.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/link-canary.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/md5.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/saslprep.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/scram-common.h
+common/cryptohash.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/common/cryptohash.h
+common/sha2.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/common/sha2.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/sha1.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/sha2.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/string.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/unicode_combining_table.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/unicode_east_asian_fw_table.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/unicode_norm.h
+mb/pg_wchar.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/mb/pg_wchar.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/unicode_norm_table.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/cryptohash.c
+postgres.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres.h
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+sys/param.h
+-
+common/cryptohash.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/cryptohash.h
+md5_int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/md5_int.h
+sha1_int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/sha1_int.h
+sha2_int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/sha2_int.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/encnames.c
+c.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/c.h
+ctype.h
+-
+unistd.h
+-
+mb/pg_wchar.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/mb/pg_wchar.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/explicit_bzero.c
+c.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/c.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-auth-sasl.h
+libpq-fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-fe.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-auth-scram.c
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+common/base64.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/base64.h
+common/hmac.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/hmac.h
+common/saslprep.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/saslprep.h
+common/scram-common.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/scram-common.h
+fe-auth.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-auth.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-auth.c
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+win32.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/win32.h
+unistd.h
+-
+fcntl.h
+-
+sys/param.h
+-
+sys/socket.h
+-
+sys/ucred.h
+-
+netdb.h
+-
+common/md5.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/md5.h
+common/scram-common.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/scram-common.h
+fe-auth.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-auth.h
+fe-auth-sasl.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-auth-sasl.h
+libpq-fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-fe.h
+fe-gssapi-common.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-gssapi-common.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-auth.h
+libpq-fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-fe.h
+libpq-int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-int.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-connect.c
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+sys/stat.h
+-
+fcntl.h
+-
+ctype.h
+-
+time.h
+-
+unistd.h
+-
+common/ip.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/ip.h
+common/link-canary.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/link-canary.h
+common/scram-common.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/scram-common.h
+common/string.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/string.h
+fe-auth.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-auth.h
+libpq-fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-fe.h
+libpq-int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-int.h
+mb/pg_wchar.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/mb/pg_wchar.h
+pg_config_paths.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pg_config_paths.h
+port/pg_bswap.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/port/pg_bswap.h
+win32.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/win32.h
+shlobj.h
+-
+mstcpip.h
+-
+sys/socket.h
+-
+netdb.h
+-
+netinet/in.h
+-
+netinet/tcp.h
+-
+pthread-win32.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pthread-win32.h
+pthread.h
+-
+winldap.h
+-
+ldap.h
+-
+fe-gssapi-common.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-gssapi-common.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-exec.c
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+ctype.h
+-
+fcntl.h
+-
+limits.h
+-
+win32.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/win32.h
+unistd.h
+-
+libpq-fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-fe.h
+libpq-int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-int.h
+mb/pg_wchar.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/mb/pg_wchar.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-lobj.c
+io.h
+-
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+win32.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/win32.h
+unistd.h
+-
+fcntl.h
+-
+limits.h
+-
+sys/stat.h
+-
+libpq-fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-fe.h
+libpq-int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-int.h
+libpq/libpq-fs.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq/libpq-fs.h
+port/pg_bswap.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/port/pg_bswap.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-misc.c
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+signal.h
+-
+time.h
+-
+win32.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/win32.h
+unistd.h
+-
+sys/time.h
+-
+poll.h
+-
+sys/select.h
+-
+libpq-fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-fe.h
+libpq-int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-int.h
+mb/pg_wchar.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/mb/pg_wchar.h
+pg_config_paths.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pg_config_paths.h
+port/pg_bswap.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/port/pg_bswap.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-print.c
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+signal.h
+-
+win32.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/win32.h
+unistd.h
+-
+sys/ioctl.h
+-
+termios.h
+-
+sys/termios.h
+-
+libpq-fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-fe.h
+libpq-int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-int.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-protocol3.c
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+ctype.h
+-
+fcntl.h
+-
+win32.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/win32.h
+unistd.h
+-
+netinet/tcp.h
+-
+libpq-fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-fe.h
+libpq-int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-int.h
+mb/pg_wchar.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/mb/pg_wchar.h
+port/pg_bswap.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/port/pg_bswap.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-secure.c
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+signal.h
+-
+fcntl.h
+-
+ctype.h
+-
+win32.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/win32.h
+sys/socket.h
+-
+unistd.h
+-
+netdb.h
+-
+netinet/in.h
+-
+netinet/tcp.h
+-
+arpa/inet.h
+-
+sys/stat.h
+-
+pthread-win32.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pthread-win32.h
+pthread.h
+-
+fe-auth.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-auth.h
+libpq-fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-fe.h
+libpq-int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-int.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-trace.c
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+ctype.h
+-
+limits.h
+-
+sys/time.h
+-
+time.h
+-
+win32.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/win32.h
+unistd.h
+-
+libpq-fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-fe.h
+libpq-int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-int.h
+port/pg_bswap.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/port/pg_bswap.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/getpeereid.c
+c.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/c.h
+sys/param.h
+-
+sys/socket.h
+-
+unistd.h
+-
+sys/un.h
+-
+ucred.h
+-
+sys/ucred.h
+-
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/hmac.c
+postgres.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres.h
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+common/cryptohash.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/cryptohash.h
+common/hmac.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/hmac.h
+common/md5.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/md5.h
+common/sha1.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/sha1.h
+common/sha2.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/sha2.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/inet_net_ntop.c
+postgres.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres.h
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+utils/inet.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/utils/inet.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/ip.c
+postgres.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres.h
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+unistd.h
+-
+sys/stat.h
+-
+sys/socket.h
+-
+netdb.h
+-
+netinet/in.h
+-
+netinet/tcp.h
+-
+arpa/inet.h
+-
+sys/file.h
+-
+common/ip.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/ip.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/legacy-pqsignal.c
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+signal.h
+-
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-events.c
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+libpq-fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-fe.h
+libpq-int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-int.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-int.h
+libpq-events.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq-events.h
+time.h
+-
+sys/time.h
+-
+pthread-win32.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pthread-win32.h
+pthread.h
+-
+signal.h
+-
+getaddrinfo.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/getaddrinfo.h
+libpq/pqcomm.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq/pqcomm.h
+fe-auth-sasl.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/fe-auth-sasl.h
+pqexpbuffer.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pqexpbuffer.h
+gssapi.h
+-
+gssapi/gssapi.h
+-
+ntsecapi.h
+-
+security.h
+-
+openssl/ssl.h
+-
+openssl/err.h
+-
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq/libpq-fs.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/libpq/pqcomm.h
+sys/socket.h
+-
+netdb.h
+-
+sys/un.h
+-
+netinet/in.h
+-
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/link-canary.c
+c.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/c.h
+common/link-canary.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/link-canary.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/mb/pg_wchar.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/md5.c
+postgres.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres.h
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+md5_int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/md5_int.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/md5_common.c
+postgres.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres.h
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+common/cryptohash.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/cryptohash.h
+common/md5.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/md5.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/md5_int.h
+common/md5.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/md5.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/noblock.c
+c.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/c.h
+fcntl.h
+-
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pg_strong_random.c
+c.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/c.h
+fcntl.h
+-
+unistd.h
+-
+sys/time.h
+-
+openssl/rand.h
+-
+wincrypt.h
+-
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pgstrcasecmp.c
+c.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/c.h
+ctype.h
+-
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/port.h
+ctype.h
+-
+port/win32_port.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/port/win32_port.h
+io.h
+-
+math.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/port/pg_bswap.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/port/win32_port.h
+winsock2.h
+-
+ws2tcpip.h
+-
+windows.h
+-
+ntstatus.h
+-
+winternl.h
+-
+process.h
+-
+signal.h
+-
+direct.h
+-
+sys/stat.h
+-
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+c.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/c.h
+common/fe_memutils.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/fe_memutils.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pqexpbuffer.c
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+limits.h
+-
+pqexpbuffer.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pqexpbuffer.h
+win32.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/win32.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pqexpbuffer.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pthread-win32.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/saslprep.c
+postgres.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres.h
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+common/saslprep.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/saslprep.h
+common/string.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/string.h
+common/unicode_norm.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/unicode_norm.h
+mb/pg_wchar.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/mb/pg_wchar.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/scram-common.c
+postgres.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres.h
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+common/base64.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/base64.h
+common/hmac.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/hmac.h
+common/scram-common.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/scram-common.h
+port/pg_bswap.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/port/pg_bswap.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/sha1.c
+postgres.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres.h
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+sys/param.h
+-
+sha1_int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/sha1_int.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/sha1_int.h
+common/sha1.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/sha1.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/sha2.c
+postgres.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres.h
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+sha2_int.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/sha2_int.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/sha2_int.h
+common/sha2.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/sha2.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/snprintf.c
+c.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/c.h
+math.h
+-
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/strerror.c
+c.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/c.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/string.c
+postgres.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres.h
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+common/string.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/string.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/strlcpy.c
+c.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/c.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/thread.c
+c.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/c.h
+pwd.h
+-
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/unicode_norm.c
+postgres.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres.h
+postgres_fe.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/postgres_fe.h
+common/unicode_norm.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/unicode_norm.h
+common/unicode_norm_hashfunc.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/unicode_norm_hashfunc.h
+common/unicode_normprops_table.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/unicode_normprops_table.h
+port/pg_bswap.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/port/pg_bswap.h
+common/unicode_norm_table.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/unicode_norm_table.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/wchar.c
+c.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/c.h
+mb/pg_wchar.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/mb/pg_wchar.h
+common/unicode_combining_table.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/unicode_combining_table.h
+common/unicode_east_asian_fw_table.h
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/common/unicode_east_asian_fw_table.h
+
+/mnt/d/Programming/C++/BazyDanych1/Prison database/Projekt/Dependencies/libpqxx-master/src/libpq/libpq/win32.h
+
+Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pg_config.h
+pg_config_linux_x64.h
+Projekt/Dependencies/libpqxx-master/src/libpq/libpq/pg_config_linux_x64.h
+
